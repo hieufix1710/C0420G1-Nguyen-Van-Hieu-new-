@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="display"></p>
+<button onclick="addStt()">Add new customer</button>
+
+
+<script>
+    let studentList=[];
+    displayStudent();
+    function displayStudent() {
+        let tableStr = "<table border='1px'>\n" +
+            "    <tr>\n" +
+            "        <th>Name</th>\n" +
+            "        <th>Age</th>\n" +
+            "        <th>Address</th>\n" +
+            "    </tr>"
+        for(let i=0;i<studentList.length;i++){
+            tableStr+=
+                "    <tr>\n" +
+                "        <td>"+studentList[i].getName()+"</td>\n" +
+                "        <td>"+studentList[i].getAge()+"</td>\n" +
+                "        <td>"+studentList[i].getAddress()+"</td>\n" +
+                "    </tr>"
+        }
+        tableStr+="</table>"
+        document.getElementById('display').innerHTML=tableStr;
+
+    }
+
+    class Student{
+        constructor(name,age,address) {
+            this.name=name;
+            this.age=age;
+            this.address=address;
+
+        }
+        setName(name){
+            this.name=name;
+        }
+        setAge(age){
+            this.age=age;
+        }
+        setAddress(address){
+            this.address=address;
+        }
+        getName(){
+            return this.name
+        }
+        getAge(){
+            return this.age
+        }
+        getAddress(){
+            return this.address
+        }
+
+    }
+    function addStt(){
+        let name =prompt("nhap name")
+        let age =prompt("nhap thuoi")
+        let address =prompt("nhap diaj chi")
+        let studen1=new Student(name,age,address)
+        // let studen2=new Student('Hieu2','20','Abc')
+        studentList.push(studen1)
+        // studentList.push(studen2)
+        displayStudent();
+    }
+
+
+
+</script>
+</body>
+</html>

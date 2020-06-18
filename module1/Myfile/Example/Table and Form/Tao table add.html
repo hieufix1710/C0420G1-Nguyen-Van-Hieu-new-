@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    table{
+        border: none;
+    }
+</style>
+
+<p id="display"></p>
+<button onclick="addItems()">Add Items</button>
+<button onclick="deleteItems()">Delete Items</button>
+<script>
+    let list=[];
+function displayList() {
+    let tableString="<table border='1'>\n" +
+        "    <tr>\n" +
+        "        <th>Name</th>\n" +
+        "        <th>Amount</th>\n" +
+        "        <th>Price</th>\n" +
+        "        <th>Into money</th>\n" +
+        "    </tr>"
+    for(let i=0;i<list.length;i++){
+        tableString+=
+            "    <tr>\n" +
+            "        <td>"+list[i].getName()+"</td>\n" +
+            "        <td>"+list[i].getAmount()+"</td>\n" +
+            "        <td>"+list[i].getPrice()+"</td>\n" +
+            "        <td>"+list[i].getIntoMoney()   +"</td>\n" +
+            "    </tr>"
+
+    }
+    tableString+="</table>"
+    document.getElementById('display').innerHTML=tableString
+}
+function addItems() {
+    let name=prompt('Enter name items')
+    let amount=parseInt(prompt('Enter amount'))
+    let price=parseInt(prompt('Enter price of item'))
+    let intoMoney=parseInt(prompt('Enter into money of items'))
+    let product=new  Product(name,amount,price,intoMoney)
+    list.push(product)
+    displayList();
+}
+function deleteItems(i) {
+        list.pop()
+    displayList();
+
+}
+class Product{
+        constructor(name,amount,price,intoMoney) {
+            this.name=name;
+            this.amount=amount;
+            this.price=price;
+            this.intoMoney=intoMoney
+        }
+         getName=function () {
+            return this.name
+
+        }
+         getAmount=function () {
+                 return this.amount
+        }
+         getPrice=function () {
+            return this.price
+
+        }
+
+         getIntoMoney=function () {
+            return this.intoMoney
+
+        }
+        setName=function (name) {
+            this.name=name
+
+        }
+        setAmount=function (amount) {
+            this.amount=amount
+
+        }
+        setPrice=function (price) {
+            this.price=price
+        }
+        setIntoMoney=function (intoMoney) {
+            this.intoMoney=intoMoney
+
+        }
+
+}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--Chuyển từ mét sang feet-->
+<p>Nhâp C</p><br>
+<input type="text" id="met">
+<br><br>
+<p id="kq"></p>
+<input type="button" value="Change" onclick="change()">
+<script>
+    function change() {
+        let met=document.getElementById('met').value
+        let feet=parseInt(met*2)
+        document.getElementById('kq').innerHTML='do F :' + feet;
+
+    }
+</script>
+
+
+
+
+</body>
+</html>

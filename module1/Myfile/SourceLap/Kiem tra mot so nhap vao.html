@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check</title>
+</head>
+
+<body>
+<p id="display"></p>
+<button id="add" onclick="add()">Add Employee</button>
+<script>
+    let stt=[1,2,3,4]
+    let ten=[]
+    let ngaySinh=[]
+    let diaChi=[]
+    let luong=[]
+    let chucvu=[]
+
+
+   displayList();
+    function displayList() {
+        let tableString= '<table border="1px">\n'+' <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Ten</th>\n' +
+            '        <th>Ngay Sinh</th>\n' +
+            '        <th>Dia Chi</th>\n' +
+            '        <th>Luong</th>\n' +
+            '        <th>Chuc vu</th>\n' +
+            '    </tr>'
+        for(let i=0;i<stt.length;i++){
+            for (let j=0;j<1;j++){
+                tableString+='<table border="1px">\n'+' <tr>\n' +
+                    '        <th>'+stt+'</th>\n' +
+                    '        <th>'+ten+'</th>\n' +
+                    '        <th>'+ngaySinh+'</th>\n' +
+                    '        <th>'+diaChi+'</th>\n' +
+                    '        <th>'+luong+'</th>\n' +
+                    '        <th>'+chucvu+'</th>\n' +
+                    '    </tr>'
+            }
+            document.write('<br>')
+        }
+
+        tableString+='</table>'
+        document.getElementById('display').innerHTML=tableString;
+
+
+    }
+    function add() {
+        stt.push(prompt('nhap vao stt new employee'))
+        ten.push(prompt('nhap ten new eemployee'))
+        ngaySinh.push(prompt('nhap ngay sinh'))
+        displayList();
+
+    }
+
+
+
+
+</script>
+</body>
+</html>

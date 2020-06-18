@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="date" type="text" oninput="leapYear()">
+<input id="month" type="text">
+<input id="year" type="text">
+<script>
+    let year= document.getElementById('year')
+   function  leapYear() {
+
+      if ((year % 4===0 &&year%100 !==0 && year % 400 !==0)||(year%100===0 && year % 400===0)) {
+         return true +year + 'la nam nhuan'
+      } else {
+          return false +year + ' la nam khong nhuan'
+      }
+  }
+  let soNgayTrongMotNam;
+    if (leapYear(true)){
+        soNgayTrongMotNam=360;
+
+    } else {
+        soNgayTrongMotNam=360-1;
+    }
+
+</script>
+
+</body>
+</html>

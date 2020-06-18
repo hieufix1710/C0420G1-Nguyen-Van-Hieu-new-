@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n=prompt('Nhap vao phan tu')
+    let tichLe=1;
+    let tichChan=1;
+    for (let i=1;i<n;i++){
+        if (i%2!=0){
+            tichLe*=i
+        }
+        if (i%2==0) {
+            tichChan*=i
+        }
+    }
+    document.write('Tich chan la :' +tichChan)
+    document.write('Tich le la :'+ tichLe)
+</script>
+
+</body>
+</html>

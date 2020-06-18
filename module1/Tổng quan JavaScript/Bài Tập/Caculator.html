@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+</head>
+<body>
+
+
+    <input type="text" name="input value" id="1" style="width: 500px">
+    <button type="submit" name="output value" onclick="tt();">Caculator</button>
+    <p id="kq"></p>
+
+    <script>
+        function tt() {
+            let B=parseInt(document.getElementById('1').value);
+            let A=B*3;
+            document.getElementById('kq').innerHTML=('Result = ' +A)
+
+
+        }
+    </script>
+
+
+
+</body>
+</html>

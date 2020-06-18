@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n=parseInt(prompt('Enter amount'))
+    let array=[]
+    for (let i=0;i<n;i++){
+        array[i] = [];
+        for (let j=0;j<n;j++){
+           array[i][j]= parseInt(prompt("nhap"))
+        }
+
+    }
+    for (let i=0;i<n;i++){
+        for (let j=0;j<n;j++){
+            document.write(array[i][j])
+        }
+        document.write("<br>")
+    }
+    let tich=1;
+    for (let j=0;j<=array[0].length;j++){
+        if (array[0][j]%3==0){
+            tich*=array[0][j]
+        }
+    }
+    alert("Tich cua cac boi so cua 3 o dong dau tien la :"+parseFloat(tich))
+    let max=0
+    let arrayX=[]
+    count=0
+    for (let i=0;i<n;i++){
+      for (let j=0;j<n;j++){
+          if (array[i][j]>max){
+              max=array[i][j]
+              arrayX[count]=max
+              count++
+          }
+      }
+
+    }
+    arrayX.splice(0,1)
+    if (arrayX===[]){
+        alert('Mang duoc 1 phan tu lon nhat ma ban splice mat roi =))   ')
+    }
+    alert(arrayX)
+</script>
+
+</body>
+</html>

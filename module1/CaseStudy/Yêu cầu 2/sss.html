@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let ten = prompt('Name');
+    let CMND= prompt('CMND');
+    let ngaySinh =prompt('Ngày Sinh');
+    let diaChi =prompt('Địa chỉ');
+    let loaiKhachHang =prompt('Hạng Khách Hàng');
+    let giamGia =prompt('Giảm Giá');
+    let soNgayThue = prompt('Số ngày thuê');
+    let loaiDichVu =prompt('Loại dịch vụ');
+    let loaiPhong =prompt('Loại phòng');
+
+
+let tongTien=0
+
+    if (loaiDichVu=='Villa'){
+        if (diaChi=='Đà Nẵng')
+            if (soNgayThue>7)
+             switch(loaiKhachHang) {
+                 case('Diamond'):
+                     tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 30 - 15;
+                     break;
+                 case ('Platium'):
+                     tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 30 - 10;
+                     break;
+                 case('Gold'):
+                     tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 30 - 5;
+                     break;
+                 case ('Silver'):
+                     tongTien=((500-20)*soNgayThue*(1-(giamGia/100)))-30-2;
+                     break;
+                 case ('Member'):
+                     tongTien=((500-20)*soNgayThue*(1-(giamGia/100)))-30;
+                     break;
+
+             }
+
+                else if (5 <soNgayThue<7 )
+                    switch(loaiKhachHang) {
+                        case('Diamond'):
+                            tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 20 - 15;
+                            break;
+                        case ('Platium'):
+                            tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 20 - 10;
+                            break;
+                        case('Gold'):
+                            tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 20 - 5;
+                            break;
+                        case ('Silver'):
+                            tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 20 - 2;
+                            break;
+                        case ('Member'):
+                            tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 20;
+                            break;
+                    }
+
+
+                else if(2<soNgayThue<4)
+                switch(loaiKhachHang) {
+                    case('Diamond'):
+                        tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 10 - 15;
+                        break;
+                    case ('Platium'):
+                        tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 10 - 10;
+                        break;
+                    case('Gold'):
+                        tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 10 - 5;
+                        break;
+                    case ('Silver'):
+                        tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 10 - 2;
+                        break;
+                    case ('Member'):
+                        tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 10;
+                        break;
+                }
+
+                else if (soNgayThue>7)
+                switch(loaiKhachHang) {
+                    case('Diamond'):
+                        tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 30 - 15;
+                        break;
+                    case ('Platium'):
+                        tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 30 - 10;
+                        break;
+                    case('Gold'):
+                        tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 30 - 5;
+                        break;
+                    case ('Silver'):
+                        tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 30 - 2;
+                        break;
+                    case ('Member'):
+                        tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 30;
+                        break;
+                }
+
+            else if (5 <soNgayThue<7 )
+                switch(loaiKhachHang) {
+                    case('Diamond'):
+                        tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 20 - 15;
+                        break;
+                    case ('Platium'):
+                        tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 20 - 10;
+                        break;
+                    case('Gold'):
+                        tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 20 - 5;
+                        break;
+                    case ('Silver'):
+                        tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 20 - 2;
+                        break;
+                    case ('Member'):
+                        tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 20;
+                        break;
+                }
+
+            else if (2<soNgayThue<4)
+                switch(loaiKhachHang) {
+                    case('Diamond'):
+                        tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 10 - 15;
+                        break;
+                    case ('Platium'):
+                        tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 10 - 10;
+                        break;
+                    case('Gold'):
+                        tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 10 - 5;
+                        break;
+                    case ('Silver'):
+                        tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 10 - 2;
+                        break;
+                    case ('Member'):
+                        tongTien = ((500 - 20) * soNgayThue * (1 - (giamGia / 100))) - 10;
+                        break;
+                }
+
+            else if (diaChi=='Quảng Nam')
+                if (soNgayThue>7)
+                    switch(loaiKhachHang) {
+                        case('Diamond'):
+                            tongTien = ((500 - 5) * soNgayThue * (1 - (giamGia / 100))) - 30 - 15;
+                            break;
+                        case ('Platium'):
+                            tongTien = ((500 - 5) * soNgayThue * (1 - (giamGia / 100))) - 30 - 10;
+                            break;
+                        case('Gold'):
+                            tongTien = ((500 - 5) * soNgayThue * (1 - (giamGia / 100))) - 30 - 5;
+                            break;
+                        case ('Silver'):
+                            tongTien = ((500 - 5) * soNgayThue * (1 - (giamGia / 100))) - 30 - 2;
+                            break;
+                        case ('Member'):
+                            tongTien = ((500 - 5) * soNgayThue * (1 - (giamGia / 100))) - 30;
+                            break;
+                    }
+
+                else if (5 <soNgayThue<7 )
+                    switch(loaiKhachHang) {
+                        case('Diamond'):
+                            tongTien = ((500 - 5) * soNgayThue * (1 - (giamGia / 100))) - 20 - 15;
+                            break;
+                        case ('Platium'):
+                            tongTien = ((500 - 5) * soNgayThue * (1 - (giamGia / 100))) - 20 - 10;
+                            break;
+                        case('Gold'):
+                            tongTien = ((500 - 5) * soNgayThue * (1 - (giamGia / 100))) - 20 - 5;
+                            break;
+                        case ('Silver'):
+                            tongTien = ((500 - 5) * soNgayThue * (1 - (giamGia / 100))) - 20 - 2;
+                            break;
+                        case ('Member'):
+                            tongTien = ((500 - 5) * soNgayThue * (1 - (giamGia / 100))) - 20;
+                            break;
+                    }
+
+                else if (2<soNgayThue<4)
+                    switch(loaiKhachHang) {
+                        case('Diamond'):
+                            tongTien = ((500 - 5) * soNgayThue * (1 - (giamGia / 100))) - 10 - 15;
+                            break;
+                        case ('Platium'):
+                            tongTien = ((500 - 5) * soNgayThue * (1 - (giamGia / 100))) - 10 - 10;
+                            break;
+                        case('Gold'):
+                            tongTien = ((500 - 5) * soNgayThue * (1 - (giamGia / 100))) - 10 - 5;
+                            break;
+                        case ('Silver'):
+                            tongTien = ((500 - 5) * soNgayThue * (1 - (giamGia / 100))) - 10 - 2;
+                            break;
+                        case ('Member'):
+                            tongTien = ((500 - 5) * soNgayThue * (1 - (giamGia / 100))) - 10;
+                            break;
+                    }
+
+    }
+
+    else if (loaiDichVu=='House'){
+        if (diaChi=='Đà Nẵng')
+            if (soNgayThue>7)
+                switch(loaiKhachHang) {
+                    case('Diamond'):
+                        tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 30 - 15;
+                        break;
+                    case ('Platium'):
+                        tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 30 - 10;
+                        break;
+                    case('Gold'):
+                        tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 30 - 5;
+                        break;
+                    case ('Silver'):
+                        tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 30 - 2;
+                        break;
+                    case ('Member'):
+                        tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 30;
+                        break;
+                }
+
+            else if (5 <soNgayThue<7 )
+                switch(loaiKhachHang) {
+                    case('Diamond'):
+                        tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 20 - 15;
+                        break;
+                    case ('Platium'):
+                        tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 20 - 10;
+                        break;
+                    case('Gold'):
+                        tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 20 - 5;
+                        break;
+                    case ('Silver'):
+                        tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 20 - 2;
+                        break;
+                    case ('Member'):
+                        tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 20;
+                        break;
+                }
+
+            else if (2<soNgayThue<4)
+                switch(loaiKhachHang) {
+                    case('Diamond'):
+                        tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 10 - 15;
+                        break;
+                    case ('Platium'):
+                        tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 10 - 10;
+                        break;
+                    case('Gold'):
+                        tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 10 - 5;
+                        break;
+                    case ('Silver'):
+                        tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 10 - 2;
+                        break;
+                    case ('Member'):
+                        tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 10;
+                        break;
+                }
+       else if  (diaChi=='Huế')
+           if (soNgayThue>7)
+               switch(loaiKhachHang) {
+                   case('Diamond'):
+                       tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 30 - 15;
+                       break;
+                   case ('Platium'):
+                       tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 30 - 10;
+                       break;
+                   case('Gold'):
+                       tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 30 - 5;
+                       break;
+                   case ('Silver'):
+                       tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 30 - 2;
+                       break;
+                   case ('Member'):
+                       tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 30;
+                       break;
+               }
+           else if (5 <soNgayThue<7 )
+               switch(loaiKhachHang) {
+                   case('Diamond'):
+                       tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 20 - 15;
+                       break;
+                   case ('Platium'):
+                       tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 20 - 10;
+                       break;
+                   case('Gold'):
+                       tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 20 - 5;
+                       break;
+                   case ('Silver'):
+                       tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 20 - 2;
+                       break;
+                   case ('Member'):
+                       tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 20;
+                       break;
+               }
+
+           else if (2<soNgayThue<4)
+               switch(loaiKhachHang) {
+                   case('Diamond'):
+                       tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 10 - 15;
+                       break;
+                   case ('Platium'):
+                       tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 10 - 10;
+                       break;
+                   case('Gold'):
+                       tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 10 - 5;
+                       break;
+                   case ('Silver'):
+                       tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 10 - 2;
+                       break;
+                   case ('Member'):
+                       tongTien = ((300 - 20) * soNgayThue * (1 - (giamGia / 100))) - 10;
+                       break;
+               }
+       else if    (diaChi=='Quảng Nam')
+           if (soNgayThue>7)
+               switch(loaiKhachHang) {
+                   case('Diamond'):
+                       tongTien = ((300 - 5) * soNgayThue * (1 - (giamGia / 100))) - 30 - 15;
+                       break;
+                   case ('Platium'):
+                       tongTien = ((300 - 5) * soNgayThue * (1 - (giamGia / 100))) - 30 - 10;
+                       break;
+                   case('Gold'):
+                       tongTien = ((300 - 5) * soNgayThue * (1 - (giamGia / 100))) - 30 - 5;
+                       break;
+                   case ('Silver'):
+                       tongTien = ((300 - 5) * soNgayThue * (1 - (giamGia / 100))) - 30 - 2;
+                       break;
+                   case ('Member'):
+                       tongTien = ((300 - 5) * soNgayThue * (1 - (giamGia / 100))) - 30;
+                       break;
+               }
+
+           else if (5 <soNgayThue<7 )
+               switch(loaiKhachHang) {
+                   case('Diamond'):
+                       tongTien = ((300 - 5) * soNgayThue * (1 - (giamGia / 100))) - 20 - 15;
+                       break;
+                   case ('Platium'):
+                       tongTien = ((300 - 5) * soNgayThue * (1 - (giamGia / 100))) - 20 - 10;
+                       break;
+                   case('Gold'):
+                       tongTien = ((300 - 5) * soNgayThue * (1 - (giamGia / 100))) - 20 - 5;
+                       break;
+                   case ('Silver'):
+                       tongTien = ((300 - 5) * soNgayThue * (1 - (giamGia / 100))) - 20 - 2;
+                       break;
+                   case ('Member'):
+                       tongTien = ((300 - 5) * soNgayThue * (1 - (giamGia / 100))) - 20;
+                       break;
+               }
+
+           else if (2<soNgayThue<4)
+               switch(loaiKhachHang) {
+                   case('Diamond'):
+                       tongTien = ((300 - 5) * soNgayThue * (1 - (giamGia / 100))) - 10 - 15;
+                       break;
+                   case ('Platium'):
+                       tongTien = ((300 - 5) * soNgayThue * (1 - (giamGia / 100))) - 10 - 10;
+                       break;
+                   case('Gold'):
+                       tongTien = ((300 - 5) * soNgayThue * (1 - (giamGia / 100))) - 10 - 5;
+                       break;
+                   case ('Silver'):
+                       tongTien = ((300 - 5) * soNgayThue * (1 - (giamGia / 100))) - 10 - 2;
+                       break;
+                   case ('Member'):
+                       tongTien = ((300 - 5) * soNgayThue * (1 - (giamGia / 100))) - 10;
+                       break;
+               }
+
+    }
+    else if (loaiDichVu=='Room'){
+        if (diaChi=='Đà Nẵng')
+            if (soNgayThue>7)
+                switch(loaiKhachHang) {
+                    case('Diamond'):
+                        tongTien = ((100 - 20) * soNgayThue * (1 - (giamGia / 100))) - 30 - 15;
+                        break;
+                    case ('Platium'):
+                        tongTien = ((100 - 20) * soNgayThue * (1 - (giamGia / 100))) - 30 - 10;
+                        break;
+                    case('Gold'):
+                        tongTien = ((100 - 20) * soNgayThue * (1 - (giamGia / 100))) - 30 - 5;
+                        break;
+                    case ('Silver'):
+                        tongTien = ((100 - 20) * soNgayThue * (1 - (giamGia / 100))) - 30 - 2;
+                        break;
+                    case ('Member'):
+                        tongTien = ((100 - 20) * soNgayThue * (1 - (giamGia / 100))) - 30;
+                        break;
+                }
+            else if (5 <soNgayThue<7 )
+                switch(loaiKhachHang) {
+                    case('Diamond'):
+                        tongTien = ((100 - 20) * soNgayThue * (1 - (giamGia / 100))) - 20 - 15;
+                        break;
+                    case ('Platium'):
+                        tongTien = ((100 - 20) * soNgayThue * (1 - (giamGia / 100))) - 20 - 10;
+                        break;
+                    case('Gold'):
+                        tongTien = ((100 - 20) * soNgayThue * (1 - (giamGia / 100))) - 20 - 5;
+                        break;
+                    case ('Silver'):
+                        tongTien = ((100 - 20) * soNgayThue * (1 - (giamGia / 100))) - 20 - 2;
+                        break;
+                    case ('Member'):
+                        tongTien = ((100 - 20) * soNgayThue * (1 - (giamGia / 100))) - 20;
+                        break;
+                }
+            else if (2<soNgayThue<4)
+                switch(loaiKhachHang) {
+                    case('Diamond'):
+                        tongTien = ((100 - 20) * soNgayThue * (1 - (giamGia / 100))) - 10 - 15;
+                        break;
+                    case ('Platium'):
+                        tongTien = ((100 - 20) * soNgayThue * (1 - (giamGia / 100))) - 10 - 10;
+                        break;
+                    case('Gold'):
+                        tongTien = ((100 - 20) * soNgayThue * (1 - (giamGia / 100))) - 10 - 5;
+                        break;
+                    case ('Silver'):
+                        tongTien = ((100 - 20) * soNgayThue * (1 - (giamGia / 100))) - 10 - 2;
+                        break;
+                    case ('Member'):
+                        tongTien = ((100 - 20) * soNgayThue * (1 - (giamGia / 100))) - 10;
+                        break;
+                }
+        if (diaChi=='Huế')
+            if (soNgayThue>7)
+                switch(loaiKhachHang) {
+                    case('Diamond'):
+                        tongTien = ((100 - 10) * soNgayThue * (1 - (giamGia / 100))) - 30 - 15;
+                        break;
+                    case ('Platium'):
+                        tongTien = ((100 - 10) * soNgayThue * (1 - (giamGia / 100))) - 30 - 10;
+                        break;
+                    case('Gold'):
+                        tongTien = ((100 - 10) * soNgayThue * (1 - (giamGia / 100))) - 30 - 5;
+                        break;
+                    case ('Silver'):
+                        tongTien = ((100 - 10) * soNgayThue * (1 - (giamGia / 100))) - 30 - 2;
+                        break;
+                    case ('Member'):
+                        tongTien = ((100 - 10) * soNgayThue * (1 - (giamGia / 100))) - 30;
+                        break;
+                }
+                else if (5 <soNgayThue<7 )
+                switch(loaiKhachHang) {
+                    case('Diamond'):
+                        tongTien = ((100 - 10) * soNgayThue * (1 - (giamGia / 100))) - 20 - 15;
+                        break;
+                    case ('Platium'):
+                        tongTien = ((100 - 10) * soNgayThue * (1 - (giamGia / 100))) - 20 - 10;
+                        break;
+                    case('Gold'):
+                        tongTien = ((100 - 10) * soNgayThue * (1 - (giamGia / 100))) - 20 - 5;
+                        break;
+                    case ('Silver'):
+                        tongTien = ((100 - 10) * soNgayThue * (1 - (giamGia / 100))) - 20 - 2;
+                        break;
+                    case ('Member'):
+                        tongTien = ((100 - 10) * soNgayThue * (1 - (giamGia / 100))) - 20;
+                        break;
+                }
+                else if (2<soNgayThue<4)
+                switch(loaiKhachHang) {
+                    case('Diamond'):
+                        tongTien = ((100 - 10) * soNgayThue * (1 - (giamGia / 100))) - 10 - 15;
+                        break;
+                    case ('Platium'):
+                        tongTien = ((100 - 10) * soNgayThue * (1 - (giamGia / 100))) - 10 - 10;
+                        break;
+                    case('Gold'):
+                        tongTien = ((100 - 10) * soNgayThue * (1 - (giamGia / 100))) - 10 - 5;
+                        break;
+                    case ('Silver'):
+                        tongTien = ((100 - 10) * soNgayThue * (1 - (giamGia / 100))) - 10 - 2;
+                        break;
+                    case ('Member'):
+                        tongTien = ((100 - 10) * soNgayThue * (1 - (giamGia / 100))) - 10;
+                        break;
+                }
+        if (diaChi=='Quảng Nam')
+            if (soNgayThue>7)
+                switch(loaiKhachHang) {
+                    case('Diamond'):
+                        tongTien = ((100 - 5) * soNgayThue * (1 - (giamGia / 100))) - 30 - 15;
+                        break;
+                    case ('Platium'):
+                        tongTien = ((100 - 5) * soNgayThue * (1 - (giamGia / 100))) - 30 - 10;
+                        break;
+                    case('Gold'):
+                        tongTien = ((100 - 5) * soNgayThue * (1 - (giamGia / 100))) - 30 - 5;
+                        break;
+                    case ('Silver'):
+                        tongTien = ((100 - 5) * soNgayThue * (1 - (giamGia / 100))) - 30 - 2;
+                        break;
+                    case ('Member'):
+                        tongTien = ((100 - 5) * soNgayThue * (1 - (giamGia / 100))) - 30;
+                        break;
+                }
+
+            else if (5 <soNgayThue<7 )
+                switch(loaiKhachHang) {
+                    case('Diamond'):
+                        tongTien = ((100 - 5) * soNgayThue * (1 - (giamGia / 100))) - 20 - 15;
+                        break;
+                    case ('Platium'):
+                        tongTien = ((100 - 5) * soNgayThue * (1 - (giamGia / 100))) - 20 - 10;
+                        break;
+                    case('Gold'):
+                        tongTien = ((100 - 5) * soNgayThue * (1 - (giamGia / 100))) - 20 - 5;
+                        break;
+                    case ('Silver'):
+                        tongTien = ((100 - 5) * soNgayThue * (1 - (giamGia / 100))) - 20 - 2;
+                        break;
+                    case ('Member'):
+                        tongTien = ((100 - 5) * soNgayThue * (1 - (giamGia / 100))) - 20;
+                        break;
+                }
+
+            else if (2<soNgayThue<4)
+                switch(loaiKhachHang) {
+                    case('Diamond'):
+                        tongTien = ((100 - 5) * soNgayThue * (1 - (giamGia / 100))) - 10 - 15;
+                        break;
+                    case ('Platium'):
+                        tongTien = ((100 - 5) * soNgayThue * (1 - (giamGia / 100))) - 10 - 10;
+                        break;
+                    case('Gold'):
+                        tongTien = ((100 - 5) * soNgayThue * (1 - (giamGia / 100))) - 10 - 5;
+                        break;
+                    case ('Silver'):
+                        tongTien = ((100 - 5) * soNgayThue * (1 - (giamGia / 100))) - 10 - 2;
+                        break;
+                    case ('Member'):
+                        tongTien = ((100     - 5) * soNgayThue * (1 - (giamGia / 100))) - 10;
+                        break;
+                }
+
+    }
+
+
+    alert('Tên Khách Hàng: '+ten +
+        '\n CMND: '+CMND+
+        '\nNgày sinh :'+ngaySinh+
+        '\nĐịa Chỉ :'+diaChi+
+        '\nLoại Khách Hàng :'+loaiKhachHang+
+        '\nGiảm giá :' + ''+giamGia+'' +
+        '\nSố ngày thuê :' +''+soNgayThue+'' +
+        '\nLoại dịch vụ :'+loaiDichVu+'' +
+        '\nLoại phòng :'+loaiPhong+
+        '\nTổng tiền : '+tongTien);
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let check=false
+
+    let email=prompt('Email');
+    do {
+        let countAt=0;
+        let countDot=0;
+
+        for(let i=0;i<email.length;i++){
+            if (email.charAt(i)==='@'){
+                countAt++;
+                for (let j=i+1;j<email.length;j++){
+                    if (email.charAt(j)==='.'){
+                        countDot++;
+
+                    }
+                }
+
+            }
+        }
+        if (countAt!=1||countDot<1){
+            alert('Email bạn vừa nhập sai định dạng')
+
+        }else {
+            check=true;
+        }
+
+    } while (!check)
+    alert("Email của bạn vừa nhâp đã đúng định dạng"+'\n'+"Email của bạn là : "+email)
+</script>
+
+</body>
+</html>

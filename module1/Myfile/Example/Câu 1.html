@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = new Array();
+
+
+    for( let i =1;i<array.length;i++){
+        array[i]=i;
+    }
+
+
+    var sum=0;
+    let count = 0;
+
+   for (let i=1;i<array.length;i++){
+
+       if (array[i]%3==0){
+          console.log(array[i])
+           sum=sum+array[i]
+           count ++;
+       }
+   }
+    alert('Trung binh cua cac so chia het cho 3 la :' +sum  );
+   alert("Co: "+count+" phan tu chia het cho 3");
+   alert('trung binh cong cua cac phan tu la '+ sum/count);
+
+</script>
+</body>
+</html>

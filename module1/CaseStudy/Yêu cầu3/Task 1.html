@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let ten = prompt('Name');
+    let diaChi =prompt('Địa chỉ');
+    let loaiKhachHang =prompt('Hạng Khách Hàng');
+    let giamGia =prompt('Giảm Giá');
+    let soNgayThue = prompt('Số ngày thuê');
+    let loaiDichVu =prompt('Loại dịch vụ');
+    let loaiPhong =prompt('Loại phòng');
+
+    let check=false;
+    do {
+        CMND= prompt('nhap CMND')
+        if (!isNaN(CMND)){
+            CMND=Number.parseFloat(CMND);
+        }
+        if (!Number.isInteger(CMND)){
+            alert('CMND khong dung dinh dang')
+            continue;
+        }
+        if (CMND< 10000000||CMND>99999999){
+            alert('CMND khong dung dinh dang')
+            continue;
+        }
+        check=true
+
+
+    } while (!check)
+
+
+    check=false;
+
+    do {
+        ngaySinh=prompt('Nhap ngay sinh')
+        if (ngaySinh.charAt(2)==='/'&&ngaySinh.charAt(5)==='/'){
+            let day=ngaySinh.substring(0,2);
+            let month=ngaySinh.substring(3,5);
+            let year=ngaySinh.substring(6,10);
+            if (!isNaN(day)&&!isNaN(month)&&!isNaN(year)){
+                day=Number.parseFloat(day)
+                month=Number.parseFloat(month)
+                year=Number.parseFloat(year)
+                if (Number.isInteger(day)&&Number.isInteger(month)&&Number.isInteger(year)){
+                    if (day<32&&month<13&&year>1950){
+                        check=true;
+                    }
+                }
+            }
+        }
+
+    } while (!check)
+    check=false;
+    let email=prompt('Email');
+    do {
+        let countAt=0;
+        let countDot=0;
+        let email=prompt('Email');
+        for(let i=0;i<email.length;i++){
+            if (email.charAt(i)==='@'){
+                countAt++;
+                for (let j=i+1;j<email.length;j++){
+                    if (email.charAt(j)==='.'){
+                        countDot++;
+
+                    }
+                }
+
+            }
+        }
+        if (countAt!=1||countDot<1){
+            alert('Email ban nhap ko dung')
+
+        }else {
+            check=true;
+        }
+
+    } while (!check)
+    check=false;
+    do {
+        let soNgayThue = parseFloat(prompt('Số ngày thuê'));
+        soNgayThue=Number.isInteger(soNgayThue)
+        if(soNgayThue<=0||soNgayThue===''){
+            alert('So ngay thue not valid')
+
+        }
+    } while (!check)
+
+</script>
+
+
+
+</body>
+</html>

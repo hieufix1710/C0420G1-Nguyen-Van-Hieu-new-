@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input id="diemkt" type="text"><br>
+<input id="diemgiuaki" type="text"><br>
+<input id="diemcuoiki" type="text"><br>
+<button  onclick="check()">Tinh</button>
+
+<p id="kq"></p>
+
+
+<script>
+    function check() {
+        let diemKt = document.getElementById('diemkt')
+        let diemgk = document.getElementById('diemgiuaki')
+        let diemck = document.getElementById('diemcuoiki')
+
+         A=parseInt((diemKt+diemck+diemgk)/3)
+
+        if (A>8){
+            alert('Hoc sinh gioi')
+        }
+        else if (6.5<A<8){
+            alert('Hoc sinh kha')
+        }
+        else if(A<6.5){
+            alert('Hoc sinh trung binh')
+        }
+
+    }
+
+</script>
+</body>
+</html>

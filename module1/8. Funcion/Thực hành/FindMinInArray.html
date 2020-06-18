@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find Min Elenment in Array</title>
+</head>
+<body>
+<p id="kq"></p>
+<script>
+
+
+
+    function minArray(array) {
+        let min=array[0];
+        for (let i=0;i<array.length;i++){
+
+            if(array[i]<min){
+                min=array[i]
+            }
+        }
+        return min;
+    }
+    let array1=[1,2,-6,-7,9,5]
+    let minArray1= minArray(array1)         //alert array 1;
+    alert('So nho nhat cua mang thu nhat la :' + minArray1)
+
+
+
+    let array2=[3, 5, 1, 8, -3, 7, 8];
+    let minArray2=minArray(array2)
+    alert('So nho nhat cua mang thu hai la :' + minArray2)
+
+    let array3= [7, 12, 6, 9, 20, 56, 89];
+    let minArray3=minArray(array3)
+    alert('So nho nhat cua mang thu ba la :'+ minArray3)
+</script>
+</body>
+</html>

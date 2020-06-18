@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    table{
+        border: solid;
+
+    }
+    div{
+        border:  solid 1px;
+        width: 20%;
+        text-align: center;
+    }
+
+
+</style>
+<div>
+<h1>Login</h1>
+<br>
+<input type="text" id="usename">
+<br>
+<br>
+<input type="password" id="password">
+<br>
+<br>
+<button onclick="login()">Login</button>
+<button onclick="addEmployee()">Add Employee</button>
+</div>
+<p id="display"></p>
+
+
+</table>
+<script>
+    let arrayList=[];
+    displayTable()
+    function displayTable() {
+        let tableString="<table border=\"1\">\n" +
+            "    <tr>\n" +
+            "        <th>Use Name</th>\n" +
+            "        <th>Name</th>\n" +
+            "        <th>Password</th>\n" +
+            "        <th>Birthday</th>\n" +
+            "        <th>Phone number</th>\n" +
+            "        <th>CMND</th>\n" +
+            "        <th>Gender</th>\n" +
+            "        <th>Address</th>\n" +
+            "    </tr>"
+        for(let i=0;i<arrayList.length;i++){
+            tableString+=
+                "    <tr>\n" +
+                "        <td>"+arrayList[i].tenDangNhap+"</td>\n" +
+                "        <td>"+arrayList[i].ten+"</td>\n" +
+                "        <td>"+arrayList[i].matKhau+"</td>\n" +
+                "        <td>"+arrayList[i].ngaySinh+"</td>\n" +
+                "        <td>"+arrayList[i].soDienThoai+"</td>\n" +
+                "        <td>"+arrayList[i].CMND+"</td>\n" +
+                "        <td>"+arrayList[i].gioiTinh+"</td>\n" +
+                "        <td>"+arrayList[i].diaChi+"</td>\n" +
+                "    </tr>"
+        }
+        tableString+="</table>"
+        document.getElementById('display').innerHTML=tableString
+
+    }   //display table
+    class Employee {
+        constructor(tenDangNhap,ten,matKhau,ngaySinh, soDienThoai, CMND, gioiTinh, diaChi) {
+            this.tenDangNhap = tenDangNhap;
+            this.ten = ten;
+            this.matKhau = matKhau;
+            this.ngaySinh = ngaySinh;
+            this.soDienThoai = soDienThoai;
+            this.CMND = CMND;
+            this.gioiTinh = gioiTinh;
+            this.diaChi = diaChi;
+        }
+        getTenDangNhap() {
+            return this.tenDangNhap;
+        }
+
+        setTenDangNhap(tenDangNhap) {
+            this.tenDangNhap = tenDangNhap;
+        }
+
+        getTen() {
+            return this.ten;
+        }
+
+        setTen(ten) {
+            this.ten = ten;
+        }
+
+        getMatKhau() {
+            return this.matKhau;
+        }
+
+        setMatKhau(matKhau) {
+            this.matKhau = matKhau;
+        }
+
+        getNgaySinh() {
+            return this.ngaySinh;
+        }
+
+        setNgaySinh(ngaySinh) {
+            this.ngaySinh = ngaySinh;
+        }
+
+        getSoDienThoai() {
+            return this.soDienThoai;
+        }
+
+        setSoDienThoai(soDienThoai) {
+            this.soDienThoai = soDienThoai;
+        }
+
+        getCMND() {
+            return this.CMND;
+        }
+
+        setCMND(CMND) {
+            this.CMND = CMND;
+        }
+
+        getGioiTinh() {
+            return this.gioiTinh;
+        }
+
+        setGioiTinh(gioiTinh) {
+            this.gioiTinh = gioiTinh;
+        }
+
+        getDiaChi() {
+            return this.diaChi;
+        }
+
+        setDiaChi(diaChi) {
+            this.diaChi = diaChi;
+        }
+
+    }
+    function addEmployee() {
+        let newEmployee=new Employee()
+        newEmployee.tenDangNhap=prompt('Enter use name')
+        newEmployee.ten=prompt('Enter  name')
+        newEmployee.matKhau=prompt('Enter password')
+        newEmployee.ngaySinh=prompt('Enter birthday')
+        newEmployee.soDienThoai=prompt('Enter yout phone number')
+        newEmployee.CMND=prompt('Enter your CMND')
+        newEmployee.gioiTinh=prompt('Enter your gender')
+        newEmployee.diaChi=prompt('Enter your address')
+
+        arrayList.push(newEmployee)
+        displayTable()
+
+    }    // add members
+
+        function login() {       // -> Error here <-
+
+
+            for (let i = 0; i < arrayList.length; i++) {
+                if (document.getElementById('usename').value === arrayList[i].tenDangNhap && document.getElementById('password').value === arrayList[i].matKhau) {
+                    alert('Login Access')
+                } else {
+                    alert('Failed ! Try again [[=')
+                }
+
+            }
+
+        }
+
+</script>
+</body>
+</html>

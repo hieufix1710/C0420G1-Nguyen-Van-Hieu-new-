@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhapten">
+<input type="text" id="nhaplop">
+<button id="add" onclick="displayStudent()">ADD</button>
+<p id="display"></p>
+<script>
+    let listStt=['a','b','c']
+    let listLop=[]
+    let listTen=[]
+    displayStudent()
+    function displayStudent() {
+        let tableString= "<table border='1'>\n" +
+            "    <tr>\n" +
+            "        <th>STT</th>\n" +
+            "        <th>ten</th>\n" +
+            "        <th>lop</th>\n" +
+            "    </tr>\n"+"</table>"
+        document.getElementById('hienthi').innerHTML=tableString
+    }
+
+
+
+
+
+</script>
+
+</body>
+</html>

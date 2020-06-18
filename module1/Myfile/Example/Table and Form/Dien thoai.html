@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+   table{
+       padding: 0px;
+       border: none;
+
+   }
+
+</style>
+<body>
+<p id="display"></p>
+<button onclick="addPhone()">Add new customer</button>
+
+
+<script>
+    let phoneList=[];
+    displayList();
+    function displayList() {
+        let tableStr = "<table border='1px' style='width: 200px; height: auto'>" +
+            "    <tr>" +
+            "        <th>Name</th>\n" +
+            "        <th>Price</th>\n" +
+            "        <th>Since</th>\n" +
+            "    </tr>"
+        for(let i=0;i<phoneList.length;i++){
+            tableStr+=
+                "    <tr>\n" +
+                "        <td>"+phoneList[i].getName()+"</td>\n" +
+                "        <td>"+phoneList[i].getPrice()+"</td>\n" +
+                "        <td>"+phoneList[i].getSince()+"</td>\n" +
+                "    </tr>"
+        }
+        tableStr+="</table>"
+        document.getElementById('display').innerHTML=tableStr;
+
+    }
+
+    class Phone{
+        constructor(name,price,since) {
+            this.name=name;
+            this.price=price;
+            this.since=since;
+
+        }
+        setName(name){
+            this.name=name;
+        }
+        setPrice(price){
+            this.price=price;
+        }
+        setSince(since){
+            this.since=since;
+        }
+        getName(){
+            return this.name
+        }
+        getPrice(){
+            return this.price
+        }
+        getSince(){
+            return this.since
+        }
+
+    }
+    function addPhone(){
+        let name =prompt("nhap name")
+        let price =prompt("nhap gia")
+        let since =prompt("nhap nam san xuat")
+        let newPhone=new Phone(name,price,since)
+
+        phoneList.push(newPhone)
+
+        displayList();
+    }
+
+
+
+</script>
+</body>
+</html>

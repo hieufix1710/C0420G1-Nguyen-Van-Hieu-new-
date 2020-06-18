@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   let n=prompt('Nhap 50 phan tu')
+    let count=0;
+   let sum=0;
+   let array=[];
+   while (count<n){
+       let element=prompt('Nhap vao phan tu thu '+count)
+       array[count]=element;
+       count++;
+
+   }
+   for (let i=0;i<array.length;i++){
+
+       if (array[i]%3){
+           sum+=array[i]
+
+
+       }
+
+   }
+   let tb=sum/count
+    alert(tb)
+</script>
+</body>
+</html>

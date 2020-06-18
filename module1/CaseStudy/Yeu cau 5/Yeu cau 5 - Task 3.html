@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrListCustomer=[];
+    function displayMainMenu() {
+        let choose=parseInt(prompt('1.Add new customer'+'\n'+'2.Display Information Customer'+'\n'+'3.Edit Information Customer'+'\n'+'4.Delete Customer'+'\n'+'5.Exit'))
+        switch (choose){
+            case 1:{
+                addNewCustomer();
+                break;
+            }
+            case 2:{
+                displayCustomer();
+                break;
+            }
+            case 3:{
+                editCustomer();
+                break;
+            }
+            case 4:{
+                break;
+            }
+            case 5:{
+
+            }
+            default: {
+                alert('Failed')
+            }
+        }
+        function addNewCustomer() {
+            let cusInfor=[];
+            let ten = prompt('Name');
+            let CMND= prompt('CMND');
+            let ngaySinh =prompt('Ngày Sinh');
+            let diaChi =prompt('Địa chỉ');
+            let loaiKhachHang =prompt('Hạng Khách Hàng');
+            let giamGia =prompt('Giảm Giá');
+            let soNgayThue = prompt('Số ngày thuê');
+            let loaiDichVu =prompt('Loại dịch vụ');
+            let loaiPhong =prompt('Loại phòng');
+
+            cusInfor.push(ten);
+            cusInfor.push(CMND);
+            cusInfor.push(ngaySinh);
+            cusInfor.push(diaChi);
+            cusInfor.push(loaiKhachHang);
+            cusInfor.push(giamGia);
+            cusInfor.push(soNgayThue);
+            cusInfor.push(loaiDichVu);
+            cusInfor.push(loaiPhong);
+            arrListCustomer.push(cusInfor);
+            alert('Complete')
+
+
+        }
+        displayMainMenu();
+
+
+        function displayCustomer() {
+            let temp=" ";
+            for (let i=0;i<arrListCustomer.length;i++){
+                temp+=i+'. Name : '+arrListCustomer[i][0]+'\n';
+            }
+            let chooseDisplay=parseInt(prompt(temp));
+            console.log(arrListCustomer[chooseDisplay]);
+            alert('Tên Khách Hàng: ' + arrListCustomer[chooseDisplay][0] +
+                '\n CMND: ' + arrListCustomer[chooseDisplay][1] +
+                '\nNgày sinh :' + arrListCustomer[chooseDisplay][2] +
+                '\nĐịa Chỉ :' + arrListCustomer[chooseDisplay][3] +
+                '\nLoại Khách Hàng :' + arrListCustomer[chooseDisplay][4] +
+                '\nGiảm giá :' + '' + arrListCustomer[chooseDisplay][5] + '' +
+                '\nSố ngày thuê :' + '' + arrListCustomer[chooseDisplay][6] + '' +
+                '\nLoại dịch vụ :' + arrListCustomer[chooseDisplay][7] + '' +
+                '\nLoại phòng :' + arrListCustomer[chooseDisplay][8] +
+                '\nTổng tiền : ' + arrListCustomer[chooseDisplay][9])
+
+        }
+
+
+        function editCustomer() {
+            let temp="";
+            for (let i=0;i<arrListCustomer.length;i++){
+                temp+=i+'. Name : '+arrListCustomer[i][0]+'\n';
+            }
+            let chooseDisplay=parseInt(prompt(temp));
+            let chooseEdit= parseInt(prompt('1. Tên Khách Hàng: '+ arrListCustomer[chooseDisplay][0] +
+                '\n 2. CMND: '+ arrListCustomer[chooseDisplay][1]+
+                '\n 3. Ngày sinh :'+ arrListCustomer[chooseDisplay][2]+
+                '\n 4.Địa Chỉ :'+ arrListCustomer[chooseDisplay][3]+
+                '\n 5.Loại Khách Hàng :'+ arrListCustomer[chooseDisplay][4]+
+                '\n 6.Giảm giá :' + arrListCustomer[chooseDisplay][5]+'' +
+                '\n 7.Số ngày thuê :' + arrListCustomer[chooseDisplay][6]+'' +
+                '\n 8.Loại dịch vụ :'+ arrListCustomer[chooseDisplay][7]+'' +
+                '\n 9.Loại phòng :'+ arrListCustomer[chooseDisplay][8]))
+
+                switch (chooseEdit) {
+                case 1: {
+                    arrListCustomer[chooseDisplay][0] = prompt('Enter Name :');
+                    break;
+                }
+                case 2:{
+                    arrListCustomer[chooseDisplay][1]=prompt('Enter CMND :');
+                    break;
+                }
+                case 3:{
+                    arrListCustomer[chooseDisplay][2]=prompt('Enter Birth :');
+                    break;
+                }
+                case 4:{
+                    arrListCustomer[chooseDisplay][3]=prompt('Enter Address');
+                    break;
+                }
+                case 5:{
+                    arrListCustomer[chooseDisplay][4]=prompt('Endter Customer Level');
+                    break;
+                }
+                case 6:{
+                    arrListCustomer[chooseDisplay][5]=prompt('Enter ');
+                    break;
+                }
+                case 7: {
+                    arrListCustomer[chooseDisplay][6]=prompt('Enter rents day');
+                }
+                case 8: {
+                    arrListCustomer[chooseDisplay][7]=prompt('Enter type services');
+                    break;
+                }
+                case 9: {
+                    arrListCustomer[chooseDisplay][8]=prompt('Enter type rooms');
+                    break;
+                }
+                default : {
+                    alert('Failed')
+                    break;
+                }
+
+
+
+            }
+
+
+
+
+
+            }
+
+    }
+displayMainMenu()
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<canvas id="myCanvas" width="500px" height="500px"></canvas>
+<body>
+<script>
+    let Rectangle=function (x,y) {
+        this.x=x;
+        this.y=y;
+
+        this.drawRegtangle= function () {
+            let ctx= document.getElementById('myCanvas').getContext('2d');
+            ctx.beginPath();
+            ctx.rect(0,0,this.x,this.y);
+            ctx.stroke();
+
+        }
+
+
+    }
+    let rectangle=new Rectangle(200,300)
+    rectangle.drawRegtangle()
+
+
+
+</script>
+</body>
+</html>

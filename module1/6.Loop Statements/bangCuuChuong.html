@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bang cuu chuong</title>
+</head>
+<body>
+<p style="text-align: left;color: red">Bang cuu chuong</p>
+<script>
+    let sout;
+    sout = "<table border='2' width='300' cellspacing='0' cellpadding='4'>"
+    for (j = 1; j <= 10; j++) {
+        sout = sout + "<tr>";
+        for (i = 2; i <= 10; i++) {
+            sout = sout + "<td>" + i+"X"+j+"="+i*j+  "</td>";
+        }
+        sout = sout + "</tr>";
+    }
+    sout = sout + "</table>";
+    document.write(sout);
+</script>
+</body>
+</html>

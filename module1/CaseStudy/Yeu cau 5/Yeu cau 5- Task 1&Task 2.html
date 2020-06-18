@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrListCustomer=[];
+    function displayMainMenu() {
+        let choose=parseInt(prompt('1.Add new customer'+'\n'+'2.Display Information Customer'+'\n'+'3.Edit Information Customer'+'\n'+'4.Delete Customer'+'\n'+'5.Exit'))
+        switch (choose){
+            case 1:{
+               addNewCustomer();
+                break;
+            }
+            case 2:{
+                displayCustomer();
+                break;
+            }
+            case 3:{
+                break;
+            }
+            case 4:{
+                break;
+            }
+            case 5:{
+
+            }
+            default: {
+                alert('Failed')
+            }
+        }
+        function addNewCustomer() {
+            let cusInfor=[];
+            let ten = prompt('Name');
+            let CMND= prompt('CMND');
+            let ngaySinh =prompt('Ngày Sinh');
+            let diaChi =prompt('Địa chỉ');
+            let loaiKhachHang =prompt('Hạng Khách Hàng');
+            let giamGia =prompt('Giảm Giá');
+            let soNgayThue = prompt('Số ngày thuê');
+            let loaiDichVu =prompt('Loại dịch vụ');
+            let loaiPhong =prompt('Loại phòng');
+
+            cusInfor.push(ten)
+            cusInfor.push(CMND)
+            cusInfor.push(ngaySinh)
+            cusInfor.push(diaChi)
+            cusInfor.push(loaiKhachHang)
+            cusInfor.push(giamGia)
+            cusInfor.push(soNgayThue)
+            cusInfor.push(loaiDichVu)
+            cusInfor.push(loaiPhong)
+            arrListCustomer.push(cusInfor)
+            alert('Complete')
+
+
+        }
+        displayMainMenu();
+
+
+        function displayCustomer() {
+            let temp="";
+            for (let i=0;i<arrListCustomer.length;i++){
+                temp+=i+'. Name : '+arrListCustomer[i][0]+'\n';
+            }
+           let chooseDisplay=parseInt(prompt(temp));
+            alert('Tên Khách Hàng: ' + arrListCustomer[chooseDisplay][0] +
+                '\n CMND: ' + arrListCustomer[chooseDisplay][1] +
+                '\nNgày sinh :' + arrListCustomer[chooseDisplay][2] +
+                '\nĐịa Chỉ :' + arrListCustomer[chooseDisplay][3] +
+                '\nLoại Khách Hàng :' + arrListCustomer[chooseDisplay][4] +
+                '\nGiảm giá :' + '' + arrListCustomer[chooseDisplay][5] + '' +
+                '\nSố ngày thuê :' + '' + arrListCustomer[chooseDisplay][6] + '' +
+                '\nLoại dịch vụ :' + arrListCustomer[chooseDisplay][7] + '' +
+                '\nLoại phòng :' + arrListCustomer[chooseDisplay][8] +
+                '\nTổng tiền : ' + arrListCustomer[chooseDisplay][9])
+
+        }
+
+    }
+
+    displayMainMenu();
+</script>
+
+</body>
+</html>

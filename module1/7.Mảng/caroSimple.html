@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Caro Game simple</h2>
+
+<script>
+    let array=[];
+    for (let i=1;i<10;i++){
+        array[i]=new Array();
+        for (let j=1;j<10;j++){
+            array[i][j]='<input type="button" id="iii" value="O" onclick="f('+i+','+j+')">';
+            document.write(array[i][j])
+        }
+        document.write('<br>')
+
+    }
+
+    function f(i,j) {
+        document.body.innerHTML="";
+        array[i][j]='<input type="button"  value="X" onclick="f('+i+','+j+')">';
+        for (let i=1;i<10;i++){
+            for (let j=1;j<10;j++){
+                document.write(array[i][j])
+            }
+            document.write('<br>')
+
+        }
+    }
+
+
+
+</script>
+
+</body>
+</html>

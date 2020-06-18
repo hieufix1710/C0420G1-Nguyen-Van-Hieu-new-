@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+        class PhanSo {
+            constructor(tu,mau) {
+                this.tu=tu
+                this.mau=mau
+
+            }
+            phepCong(){
+                return this.tu+this.mau
+            }
+            phepTru(){
+                return this.tu-this.mau
+            }
+            phepNhan(){
+                return this.tu*this.mau
+            }
+
+
+            phepChia(){
+                return this.tu/this.mau
+            }
+        }
+        let a=new PhanSo(parseInt(prompt('Nhap tu')),parseInt(prompt("Nhap mau")))
+    alert(a.phepCong())
+    alert(a.phepTru())
+    alert(a.phepNhan())
+    alert(a.phepChia())
+</script>
+
+</body>
+</html>

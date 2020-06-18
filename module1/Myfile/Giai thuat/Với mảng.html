@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n =parseInt(prompt('Enter amount number in array'))
+    let A=[];
+    let sum=0;
+    let count=0
+
+        for (let i=0;i<n;i++){
+            A[count]=i
+            count++
+            if (i%2!==0){
+                sum+=i
+            }
+        }
+        alert(sum)
+    alert("Thu tu tang dan cua A :"+A.sort())
+    function sortA() {
+            A.sort()
+        alert(A.sort())
+
+    }
+        let p=parseInt(prompt('push p'))
+   A.push(p)
+   for (let i=0;i<A.length;i++){
+       if (p===A[i]){
+           A.pop()
+           alert(A)
+       }
+   }
+</script>
+
+</body>
+</html>

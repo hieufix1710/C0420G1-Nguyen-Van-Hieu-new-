@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    td, th {
+        padding: 20px;
+        border: 1px solid black;
+    }
+    th{
+        font-family: 'Patua One', cursive;
+        font-size:16px;
+        font-weight:400;
+        color:#fff;
+        text-align:center;
+        padding:20px;
+        background-color: #d61b06;
+        border-color: white;
+    }
+    tr{
+        font-family: 'Open Sans', sans-serif;
+        font-weight:400;
+        color:#5f6062;
+        font-size:13px;
+        padding:20px 20px 20px 20px;
+        border-bottom:1px solid #e0e0e0;
+        text-align: center;
+    }
+
+</style>
+<body>
+<p id="display"></p>
+<button onclick="add()">Add new person</button>
+</table>
+<script>
+    let listStt=[];
+    displayTable();
+    function displayTable() {
+        let tableString="<table border='1'>\n" +
+                "<tr>"+
+            "    <th>STT</th>\n" +
+            "    <th>Name</th>\n" +
+            "    <th>Room</th>\n" +
+            "    <th>Address</th>\n"+
+            "</tr>";
+        for(let i=0;i<listStt.length;i++){
+            tableString+="<tr>"+
+                "    <td>"+listStt[i].getStt()+"</td>\n" +
+                "    <td>"+listStt[i].getName()+"</td>\n" +
+                "    <td>"+listStt[i].getRoom()+"</td>\n" +
+                "    <td>"+listStt[i].getAddress()+"</td>\n"+
+                    "</tr>"
+        }
+        tableString+="</table>";
+        document.getElementById('display').innerHTML=tableString;
+
+    }
+    class Table {
+        constructor(stt,name,room,address) {
+            this.stt=stt;
+            this.name=name;
+            this.room=room;
+            this.address=address
+        }
+        getStt(){
+            return this.stt
+        }
+        setStt(stt){
+            this.stt=stt
+        }
+        getName(){
+            return this.name
+        }
+        setName(name){
+            this.name=name
+        }
+        getRoom(){
+            return this.room
+        }
+        setRoom(room){
+            this.room=room
+        }
+        getAddress(){
+            return this.address
+        }
+        setAddress(address){
+            this.address=address
+        }
+
+    }
+    function add() {
+
+
+
+        let stt=prompt('Enter stt')
+        let name=prompt('Enter name :')
+        let room=prompt('Enter number room')
+        let address=prompt('Enter address')
+        let element=new Table(stt,name,room,address)
+        listStt.push(element)
+        displayTable()
+
+    }
+
+
+    displayTable();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   class Person{
+       constructor(name,age,address) {
+           this.name=name;
+           this.age=age;
+           this.address=address;
+
+       }
+       work(year){
+           alert("He has working "+year+" year in codegym")
+       }
+   }
+   let person1=new Person(prompt('write here name of client '),prompt('Write here year old of client '),prompt('And here is address of client'))
+    alert('This is information of client has input'+'\n'+person1.name+'\n'+person1.age+'\n'+person1.address)
+    person1.work(10)
+
+</script>
+</body>
+</html>

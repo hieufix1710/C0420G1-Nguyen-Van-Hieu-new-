@@ -1,0 +1,102 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let ten = 'Ngguyễn Văn A';
+    let CMND= '12345678';
+    let ngaySinh ='01/01/1990';
+    let diaChi ='Đà Nẵng';
+    let loaiKhachHang ='Diamond';
+    let giamGia ='50;'
+    let soNgayThue = '30';
+    let loaiDichVu ='Villa';
+    let loaiPhong ='    Vip';
+    let giaDichVu=0;
+    let tongTien=0;
+
+let choose= parseInt(prompt("1.Hiển thị thông tin khách hàng"+"\n"+
+"2. Chỉnh sửa thông tin khách hàng"+"\n"+"3.Hiển thị giá sau khi được giảm giá"))
+    switch (choose) {
+    case 1: {
+        alert('Tên Khách Hàng: ' + ten +
+            '\n CMND: ' + CMND +
+            '\nNgày sinh :' + ngaySinh +
+            '\nĐịa Chỉ :' + diaChi +
+            '\nLoại Khách Hàng :' + loaiKhachHang +
+            '\nGiảm giá :' + '' + giamGia + '' +
+            '\nSố ngày thuê :' + '' + soNgayThue + '' +
+            '\nLoại dịch vụ :' + loaiDichVu + '' +
+            '\nLoại phòng :' + loaiPhong +
+            '\nTổng tiền : ' + tongTien);
+        break;
+    }
+    case 2:
+        let chooseEdit= parseInt(prompt('1. Tên Khách Hàng: '+ten +
+            '\n 2. CMND: '+CMND+
+            '\n 3. Ngày sinh :'+ngaySinh+
+            '\n 4.Địa Chỉ :'+diaChi+
+            '\n 5.Loại Khách Hàng :'+loaiKhachHang+
+            '\n 6.Giảm giá :' + ''+giamGia+'' +
+            '\n 7.Số ngày thuê :' +''+soNgayThue+'' +
+            '\n 8.Loại dịch vụ :'+loaiDichVu+'' +
+            '\n 9.Loại phòng :'+loaiPhong));
+        switch (chooseEdit) {
+            case 1: {
+                 ten = prompt('Enter Name :');
+                break;
+            }
+            case 2:{
+                CMND=prompt('Enter CMND :');
+                break;
+            }
+            case 3:{
+                ngaySinh=prompt('Enter Birth :');
+                break;
+            }
+            case 4:{
+                diaChi=prompt('Enter Address');
+                break;
+            }
+            case 5:{
+                loaiKhachHang=prompt('Endter Customer Level');
+                break;
+            }
+            case 6:{
+                giamGia=prompt('Enter ');
+                break;
+            }
+            case 7: {
+                soNgayThue=prompt('Enter rents day');
+            }
+            case 8:{
+                loaiDichVu=prompt('Enter type services');
+                break;
+            }
+            case 9:{
+                loaiPhong=prompt('Enter type rooms');
+                break;
+            }
+
+
+        }  alert('Tên Khách Hàng: ' + ten +
+            '\n CMND: ' + CMND +
+            '\nNgày sinh :' + ngaySinh +
+            '\nĐịa Chỉ :' + diaChi +
+            '\nLoại Khách Hàng :' + loaiKhachHang +
+            '\nGiảm giá :' + '' + giamGia + '' +
+            '\nSố ngày thuê :' + '' + soNgayThue + '' +
+            '\nLoại dịch vụ :' + loaiDichVu + '' +
+            '\nLoại phòng :' + loaiPhong +
+            '\nTổng tiền : ' + tongTien);
+
+
+    }
+
+</script>
+</body>
+</html>

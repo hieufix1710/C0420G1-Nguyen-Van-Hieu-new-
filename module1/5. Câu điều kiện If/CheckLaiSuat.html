@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4>Số tiền vay</h4><br>
+<input type="text" id="stv"><br><br>
+<h4>Lãi suất</h4><br>
+<input type="text" id="ls"><br><br>
+<h4>Thời gian vay</h4><br>
+<input type="text" id="tg"><br><br>
+
+
+<button onclick="check()">Check</button>
+<p id="lspt"></p>
+<script>
+    function check() {
+        let soTienVay=parseInt(document.getElementById('stv').value);
+        let laiSuat=parseInt((document.getElementById('ls').value));
+        let thoiGian=parseInt(document.getElementById('tg').value);
+        let sum=soTienVay;
+
+
+
+
+        for(let i=1;i<=thoiGian;i++){
+
+           sum+=sum*(laiSuat/100)
+            alert('so tien phai tra'+sum)
+            break;
+        }
+
+
+    }
+</script>
+
+</body>
+</html>

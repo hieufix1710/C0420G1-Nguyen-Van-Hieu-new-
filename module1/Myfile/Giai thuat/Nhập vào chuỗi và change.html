@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+let chuoiGoc=prompt('nhap vao mot chuoi')
+let chuoiDao ="";
+for(let i=chuoiGoc.length-1;i>=0;i--){
+   chuoiDao+= chuoiGoc[i];
+}
+alert("chuoi da dao"+chuoiDao)
+let chuoiDaoInHoa=chuoiDao.toUpperCase()
+    alert("Đổi sang chữ hoa : "+ chuoiDaoInHoa);
+let chuoiDaoInThuong=chuoiDao.toLowerCase()
+    alert("Đổi sang chữ thường :"+chuoiDaoInThuong)
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Circle = function(radius) {
+
+        this.radius = radius;
+        this.getRadius = function() {
+            return this.radius;
+        }
+        this.getArea = function() {
+            return Math.PI * this.radius * this.radius;
+        }
+
+    };
+    let circle1 = new Circle(2);
+
+    let radius1 = circle1.getRadius(); // 2
+
+    let area1 = circle1.getArea(); // 12.566370614359172
+    alert("radius1: " + radius1 + "; area1: " + area1);
+    let circle2 =new  Circle(3)
+    let radius2=circle2.getRadius();
+    let area2=circle2.getArea();
+    alert('radius2 :'+ radius2+ "; area2 : " + area2)
+    alert('S cua 2 circle la :'+(area1+area2))
+
+</script>
+</body>
+</html>

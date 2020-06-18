@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button type="button" style="color: #f10614; position: absolute; left: 600px; top:400px " onclick="play()">PLAY</button>
+<script>
+
+    function play() {
+        let a=parseInt(prompt('Nhập khoảng bạn đoán từ :'));
+        let b=parseInt(prompt('khang ban doan den'));
+        let c=parseInt(Math.round(Math.random()*a+b));
+        let count=0;
+        let d;
+        while (c!==a && c<b && count!==3){
+            let d=parseInt(prompt("Nhập số mà bạn cho là đúng :))"))
+            if (d==c){
+                alert("Bạn đoán đúng rồi")
+                break;
+            } if (d!==c){
+                alert("Failed" + "So dung la "+ c)
+                count++
+
+            }
+        }
+
+    }
+
+</script>
+</body>
+</html>

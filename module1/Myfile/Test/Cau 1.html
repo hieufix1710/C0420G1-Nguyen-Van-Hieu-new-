@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array=[];
+    let count=0;
+    let sum=0;
+    let n = prompt('nhap vao so phan tu')
+    while (count<n){
+        let element=parseInt(prompt('Nhap vao phan tu'))
+        array[count]=element
+        count++;
+    }
+    for (let i=0;i<array.length;i++){
+        array[count]=array[i]
+        if (array[i]%3==0){
+            sum+=array[i]
+
+        }
+    }
+    console.log(sum)
+    alert(array)
+
+</script>
+</body>
+</html>

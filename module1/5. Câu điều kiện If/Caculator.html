@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<input type="text" id="A">
+<input type="text" id="pheptinh" style="width: 20px">
+<input type="text" id="B">
+
+<input type="button" onclick="tinhToan()" value="Enter">
+<p id="ket_qua"></p>
+<script>
+    function tinhToan() {
+        let A = document.getElementById('A').value;    // dat gia tri 1
+        let B = document.getElementById('B').value;   // dat gia tri 2
+        let P=document.getElementById('pheptinh').value;   // dat phep tinh
+        A=parseInt(A);
+        B=parseInt(B);
+        let ket_qua=0;
+
+
+        if (P=='+')
+            ket_qua=A+B;
+        else if (P=='-')
+            ket_qua=A-B;
+        else if (P=='*')
+            ket_qua=A*B;
+        else if (P=='/')
+            ket_qua=A/B;
+        else
+            ket_qua='Ban nhap sai cu phap';
+        document.getElementById('ket_qua').innerHTML='Ket qua ='+ket_qua;
+
+
+    }
+</script>
+
+
+</body>
+</html>

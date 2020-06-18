@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h2>Convert meters to feet</h2>
+<input type="text" oninput="change(this.value)">
+<p id="kq1"></p>
+<hr>
+<h2>Convert feet to meters</h2>
+<input type="text" oninput="change2(this.value)">
+<p id="kq2"></p>
+<script>
+function change(meter) {
+    feet= 3.279*meter
+    feet=parseFloat(feet)
+    document.getElementById('kq1').innerHTML=feet + " Feet  "
+}
+function change2(feet) {
+    meter=0.305*feet
+    feet=parseFloat(feet)
+    document.getElementById('kq2').innerHTML=meter + " Met"
+
+
+}
+
+
+</script>
+</body>
+</html>

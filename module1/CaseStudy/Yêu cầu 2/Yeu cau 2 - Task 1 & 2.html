@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let ten = prompt('Name');
+    let CMND= prompt('CMND');
+    let ngaySinh =prompt('Ngày Sinh');
+    let diaChi =prompt('Địa chỉ');
+    let loaiKhachHang =prompt('Hạng Khách Hàng'+'VD; Diamond,Platium,Gold,Silver,Member');
+    let giamGia =prompt('Giảm Giá');
+    let soNgayThue = prompt('Số ngày thuê');
+    let loaiDichVu =prompt('Loại dịch vụ'+'(VD; Villa,House,Room');
+    let loaiPhong =prompt('Loại phòng');
+
+
+
+    let choose=parseInt(prompt('1. Hiển thị thông tin khách hàng'+'\n'+'2. Chỉnh sửa thông tin của khách hàng' + '\n'+'3. Hiển thị giá sau khi được giảm giá'))
+    switch (choose){
+        case 1:{
+
+            alert('1.Tên :'+ten+'\n'+'2.CMND :'+CMND+'\n'+'3.Ngày sinh :'+ngaySinh+'\n'+'4.Địa chỉ :'+diaChi+'\n'+'5.Loại khách hàng :'+loaiKhachHang+'\n'+'6.Giảm giá :'+giamGia+'\n'+'7.Số ngày thuê :'+soNgayThue+'\n'+'8.Loại dịch vụ :'+loaiDichVu+'\n'+'9.Loại phòng :'+loaiPhong)
+            break;
+        }
+
+
+
+        case 2: {
+            let chooseEdit=parseInt(prompt('1.Tên :'+ten+'\n'+'2.CMND :'+CMND+'\n'+'3.Ngày sinh :'+ngaySinh+'\n'+'4.Địa chỉ :'+diaChi+'\n'+'5.Loại khách hàng :'+loaiKhachHang+'\n'+'6.Giảm giá :'+giamGia+'\n'+'7.Số ngày thuê :'+soNgayThue+'\n'+'8.Loại dịch vụ :'+loaiDichVu+'\n'+'9.Loại phòng :'+loaiPhong))
+            switch (chooseEdit){
+                case 1:{
+                     ten=prompt('Nhập vào tên cần sửa :');
+                    break;
+
+                }
+                case 2:{
+                    CMND=prompt('Nhập CMND cần sửa:');
+                    break;
+                }
+                case 3:{
+                    ngaySinh=prompt('Nhập ngày sinh cần sửa:');
+                    break;
+                }
+                case 4:{
+                    diaChi=prompt('Nhập địa chỉ cần sửa');
+                    break;
+                }
+                case 5:{
+                    loaiKhachHang=prompt('Nhập loại khách hàng cần sửa');
+                    break;
+                }
+                case 6:{
+                    giamGia=prompt('Nhập discount của bạn');
+                    break;
+                }
+                case 7: {
+                    soNgayThue=prompt('Nhập số ngày cần thuê');
+                }
+                case 8:{
+                    loaiDichVu=prompt('Nhập loại dịch vụ bạn muốn sửa');
+                    break;
+                }
+                case 9:{
+                    loaiPhong=prompt('Nhập loại phòng cần đổi');
+                    break;
+                }
+
+            }
+            alert('1.Tên :'+ten+'\n'+'2.CMND :'+CMND+'\n'+'3.Ngày sinh :'+ngaySinh+'\n'+'4.Địa chỉ :'+diaChi+'\n'+'5.Loại khách hàng :'+loaiKhachHang+'\n'+'6.Giảm giá :'+giamGia+'\n'+'7.Số ngày thuê :'+soNgayThue+'\n'+'8.Loại dịch vụ :'+loaiDichVu+'\n'+'9.Loại phòng :'+loaiPhong)
+            break;
+        }
+        default :{
+            alert('Failed. Please try again =))')
+
+        }
+
+    }
+</script>
+
+</body>
+</html>

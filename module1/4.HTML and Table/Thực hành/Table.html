@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>yêu cầu 6</title>
+</head>
+<body>
+<form>
+    <table style="background-color: wheat; " width="50%" align="center" cellpadding="10">
+        <h1 align="center" style="color: blue">CLIENT</h1><br>
+        <tr>
+            <th width="50%">TIÊU ĐỀ</th>
+            <th>NỘI DUNG</th>
+        </tr>
+        <tr>
+            <td>Họ và tên :</td>
+            <td>
+                <input id="name" name="yourname" tyle="text" style="width: 100%;">
+            </td>
+        </tr>
+        <tr>
+            <td>CMND :</td>
+            <td>
+                <input id="id" name="cmnd" type="number" style="width: 100%">
+
+            </td>
+        </tr>
+        <tr>
+            <td>Ngày Tháng Năm Sinh :</td>
+            <td>
+                <input id="birthday" name="birthday" type="date" style="width: 100%">
+            </td>
+        </tr>
+        <tr>
+            <td>Giới tính :</td>
+            <td>
+                <select id="sex" name="sex">
+                    <option value="Nam">Nam</option>
+                    <option value="Nu">Nữ</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>
+                <input id="email" name="email" type="email" style="width: 100%">
+            </td>
+        </tr>
+        <tr>
+            <td>Địa Chỉ</td>
+            <td>
+                <input id="address" name="address" type="text" style="width: 100%">
+            </td>
+        </tr>
+        <tr>
+            <td>Loại khách</td>
+            <td>
+                <select id="customer" name="customer">
+                    <option value="Diamond">Diamond</option>
+                    <option value="Platinum">Platinum</option>
+                    <option value="Gold">Gold</option>
+                    <option value="Silver">Silver</option>
+                    <option value="Member">Member</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Giảm giá</td>
+            <td>
+                <select id="sell" name="sell">
+                    <option value="5">5%</option>
+                    <option value="10">10%</option>
+                    <option value="15">15%</option>
+                    <option value="20">20%</option>
+                    <option value="25">25%</option>
+                    <option value="30">30%</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Số lượng đi kèm</td>
+            <td>
+                <input id="quantityIncluded" name="quantityIncluded" type="number">
+            </td>
+        </tr>
+        <tr>
+            <td>Số ngày thuê</td>
+            <td>
+                <input id="rendDays" name="rendDays" type="number"> Ngày
+            </td>
+        </tr>
+        <tr>
+            <td>Loại Dịch Vụ</td>
+            <td>
+                <select id="service" name="service">
+                    <option value="villa">villa</option>
+                    <option value="house">house</option>
+                    <option value="room">room</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Loại Phòng Thuê</td>
+            <td>
+                <select id="typeRoom" name="service">
+                    <option value="Vip">Vip</option>
+                    <option value="Business">Business</option>
+                    <option value="Normal">Normal</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2">
+                <input name="reset" type="reset" value="reset">
+                <input type="button" id="add" value="Add" onclick="addCustomer()">
+                <input type="button" id="show" value="Show" onclick="displayCustomer()">
+                <input type="button" id="update" value="Update" onclick="addCustomer()">
+            </td>
+        </tr>
+    </table>
+</form>
+<div>
+    <p id="result"></p>
+    Tổng tiền :<p id="result1"></p>
+
+</div>
+<script>
+    let listCustomer = new Array();
+
+    class Customer {
+        constructor(name, cmnd, sex, birthday, email, address, typeService, typeRoom, typeCustomer, discount, quantityIncluded, rendDays) {
+            this.name = name;
+            this.cmnd = cmnd;
+            this.sex = sex;
+            this.birthday = birthday;
+            this.email = email;
+            this.address = address;
+            this.typeService = typeService;
+            this.typeRoom = typeRoom;
+            this.typeCustomer = typeCustomer;
+            this.discount = discount;
+            this.quantityIncluded = quantityIncluded;
+            this.rendDays = rendDays;
+        }
+
+        setName(Name) {
+            this.name = Name;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setCmnd(cmnd) {
+            this.cmnd = cmnd;
+        }
+
+        getCmnd() {
+            return this.cmnd;
+        }
+
+        setBirthday(birthday) {
+            this.birthday = birthday;
+        }
+
+        getBirthday() {
+            return this.birthday;
+        }
+
+        setEmail(email) {
+            this.email = email;
+        }
+
+        getEmail() {
+            return this.email;
+        }
+
+        setAddress(address) {
+            this.address = address;
+        }
+
+        getAddress() {
+            return this.address;
+        }
+
+        setTypeService(typeService) {
+            this.typeService = typeService;
+        }
+
+        getTypeService() {
+            return this.typeService;
+        }
+
+        setTypeRoom(typeRoom) {
+            this.typeRoom = typeRoom;
+        }
+
+        getTypeRoom() {
+            return this.typeRoom;
+        }
+
+        setTypeCustomer(typeCustomer) {
+            this.typeCustomer = typeCustomer;
+        }
+
+        getTypeCustomer() {
+            return this.typeCustomer;
+        }
+
+        setDiscount(discount) {
+
+            this.discount = discount;
+        }
+
+        getDiscount() {
+            return this.discount;
+        }
+
+        setQuantylyIncluded(quantityIncluded) {
+            this.quantityIncluded = quantityIncluded;
+        }
+
+        getQuantityIncluded() {
+            return this.quantityIncluded;
+        }
+
+        setRenddays(rendDays) {
+            this.rendDays = rendDays;
+        }
+
+        getRendDays() {
+            return this.rendDays;
+        }
+
+        isMale() {
+            if (this.sex) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        setSex(sex) {
+            this.sex = sex;
+        }
+
+        totalPay() {
+            let total = 0;
+
+            if (this.getTypeService() == "villa") {
+                switch (this.getTypeCustomer()) {
+                    case "Diamond":
+                        total = 500 * this.getRendDays() * (1 - this.getDiscount() / 100) - 15;
+                        break;
+                    case "Platinum":
+                        total = 500 * this.getRendDays() * (1 - this.getDiscount() / 100) - 10;
+                        break;
+                    case "Gold":
+                        total = 500 * this.getRendDays() * (1 - this.getDiscount() / 100) - 5;
+                        break;
+                    case "Silver":
+                        total = 500 * this.getRendDays() * (1 - this.getDiscount() / 100) - 2;
+                        break;
+                    case  "Member":
+                        total = 500 * this.getRendDays() * (1 - this.getDiscount() / 100);
+                }
+            } else if (this.getTypeService() == "house") {
+                switch (this.getTypeCustomer()) {
+                    case "Diamond":
+                        total = 300 * this.getRendDays() * (1 - this.getDiscount() / 100) - 15;
+                        break;
+                    case "Platinum":
+                        total = 300 * this.getRendDays() * (1 - this.getDiscount() / 100) - 10;
+                        break;
+                    case "Gold":
+                        total = 300 * this.getRendDays() * (1 - this.getDiscount() / 100) - 5;
+                        break;
+                    case "Silver":
+                        total = 300 * this.getRendDays() * (1 - this.getDiscount() / 100) - 2;
+                        break;
+                    case  "Member":
+                        total = 300 * this.getRendDays() * (1 - this.getDiscount() / 100);
+                }
+            } else if (this.getTypeService() == "room") {
+                switch (this.getTypeCustomer()) {
+                    case "Diamond":
+                        total = 100 * this.getRendDays() * (1 - this.getDiscount() / 100) - 15;
+                        break;
+                    case "Platinum":
+                        total = 100 * this.getRendDays() * (1 - this.getDiscount() / 100) - 10;
+                        break;
+                    case "Gold":
+                        total = 100 * this.getRendDays() * (1 - this.getDiscount() / 100) - 5;
+                        break;
+                    case "Silver":
+                        total = 100 * this.getRendDays() * (1 - this.getDiscount() / 100) - 2;
+                        break;
+                    case  "Member":
+                        total = 100 * this.getRendDays() * (1 - this.getDiscount() / 100);
+                }
+            }
+            if (this.getRendDays() > 7) {
+                total = total - 30;
+                if (total >= 5)
+                    total = total - 20;
+            } else total = total - 10;
+
+            if (this.getAddress() == "Đà Nẵng") {
+
+                let currentYear = new Date().getFullYear();
+                let birthday1 = new Date(birthday).getFullYear();
+                let ageCustomer = currentYear - birthday1;
+                if (ageCustomer > 30)
+                    total = total - 2;
+                if (ageCustomer <= 30 && ageCustomer >= 20)
+                    total = total - 1;
+
+                total = total - 20;
+            } else if (this.getAddress() == "Huế") {
+                total = total - 10
+            } else total = total - 5;
+
+            return total;
+        }
+
+        // showInfo() {
+        //     let info = `Name: ${this.getName()}
+        //                 Email: ${this.getEmail()}
+        //                 Sex: ${this.isMale()}
+        //                 Birthday: ${this.getBirthday()}
+        //                 Discount: ${this.getDiscount()}
+        //                 Address: ${this.getAddress()}
+        //                 cmnd: ${this.getCmnd()}
+        //                 Rendays: ${this.getRendDays()}
+        //                 TypeCustomer: ${this.getTypeCustomer()}
+        //                 TypeRoom: ${this.getTypeRoom()}
+        //                 TypeService: ${this.getTypeService()}
+        //                 TaltolPays : ${this.totalPay()}`
+        //     return info;
+        // }
+    }
+
+    function addCustomer() {
+        let name = document.getElementById("name").value;
+        name = editname(name);
+        let cmnd = document.getElementById("id").value;
+        cmnd = checkCmnd(cmnd);
+        if (cmnd == '') {
+            alert('vui long nhap lai cmnd');
+            return;
+        }
+        let sex = document.getElementById("sex").value;
+        let birthday = document.getElementById("birthday").value;
+        let email = document.getElementById("email").value;
+        email = checkMail(email);
+        if ( email == ""){
+            alert("vui lòng nhập lại email");
+            return;
+        }
+        let address = document.getElementById("address").value;
+        let typeService = document.getElementById("service").value;
+        let typeRoom = document.getElementById("typeRoom").value;
+        let typeCustomer = document.getElementById("customer").value;
+        let discount = document.getElementById("sell").value;
+        let quantityIncluded = document.getElementById("quantityIncluded").value;
+        let rendDays = document.getElementById("rendDays").value;
+        rendDays = checkRendays(rendDays);
+        if (rendDays == '') {
+            alert('số ngày thuê phải lớn hơn 0');
+            return;
+        }
+        let cus = new Customer(name, cmnd, sex, birthday, email, address, typeService, typeRoom, typeCustomer, discount, quantityIncluded, rendDays)
+        listCustomer.push(cus);
+    }
+
+    function displayCustomer() {
+        let display = '<table border="1">\n' +
+            '<tr>\n' +
+            '<th style="height: 20px;width: 200px">Họ và tên</th>\n' +
+            '<th style="height: 20px;width: 200px">cmnd</th>\n' +
+            '<th style="height: 20px;width: 200px">sex</th>\n' +
+            '<th style="height: 20px;width: 200px">Ngày Tháng Năm Sinh</th>\n' +
+            '<th style="height: 20px;width: 200px">Email</th>\n' +
+            '<th style="height: 20px;width: 200px">Địa chỉ</th>\n' +
+            '<th style="height: 20px;width: 200px">Loại khách</th>\n' +
+            '<th style="height: 20px;width: 200px">Giảm giá</th>\n' +
+            '<th style="height: 20px;width: 200px">Số lượng đi kèm</th>\n' +
+            '<th style="height: 20px;width: 200px">Số ngày thuê</th>\n' +
+            '<th style="height: 20px;width: 200px">Loại dịch vụ</th>\n' +
+            '<th style="height: 20px;width: 200px">Loại Phòng Thuê</th>\n' +
+            '<th style="height: 20px;width: 200px"></th>\n' +
+            '<th style="height: 20px;width: 200px"></th>\n' +
+            '<th style="height: 20px;width: 200px"></th>\n' +
+            '</tr>'
+
+        for (let i = 0; i < listCustomer.length; i++) {
+            display += '<tr>\n' +
+                '<td style="height: 20px;width: 200px">' + listCustomer[i].name + '</td>\n' +
+                '<td style="height: 20px;width: 200px">' + listCustomer[i].cmnd + '</td>\n' +
+                '<td style="height: 20px;width: 200px">' + listCustomer[i].sex + '</td>\n' +
+                '<td style="height: 20px;width: 200px">' + listCustomer[i].birthday + '</td>\n' +
+                '<td style="height: 20px;width: 200px">' + listCustomer[i].email + '</td>\n' +
+                '<td style="height: 20px;width: 200px">' + listCustomer[i].address + '</td>\n' +
+                '<td style="height: 20px;width: 200px">' + listCustomer[i].typeCustomer + '</td>\n' +
+                '<td style="height: 20px;width: 200px">' + listCustomer[i].discount + '</td>\n' +
+                '<td style="height: 20px;width: 200px">' + listCustomer[i].quantityIncluded + '</td>\n' +
+                '<td style="height: 20px;width: 200px">' + listCustomer[i].rendDays + '</td>\n' +
+                '<td style="height: 20px;width: 200px">' + listCustomer[i].typeService + '</td>\n' +
+                '<td style="height: 20px;width: 200px">' + listCustomer[i].typeRoom + '</td>\n' +
+                '<td style="height: 20px;width: 200px"><button onclick="deleteCustomer(' + i + ')">xóa</button></td>\n' +
+                '<td style="height: 20px;width: 200px"><button onclick="showTotalPays(' + i + ')">tổng tiền</button></td>\n' +
+                '<td style="height: 20px;width: 200px"><button onclick="editCustomer(' + i + ')">sửa</button></td>\n' +
+                '</tr>'
+        }
+        display += '</table>';
+        document.getElementById("result").innerHTML = display;
+    }
+
+    function deleteCustomer(index) {
+        listCustomer.splice(index, 1)
+        displayCustomer();
+    }
+
+    function showTotalPays(index) {
+        let show = listCustomer[index].totalPay()
+        document.getElementById("result1").innerHTML = show;
+    }
+
+    function editCustomer(index) {
+        document.getElementById("name").value = listCustomer[index].name;
+        document.getElementById("id").value = listCustomer[index].cmnd;
+        document.getElementById("sex").value = listCustomer[index].sex;
+        document.getElementById("birthday").value = listCustomer[index].birthday;
+        document.getElementById("email").value = listCustomer[index].email;
+        document.getElementById("address").value = listCustomer[index].address;
+        document.getElementById("service").value = listCustomer[index].typeService;
+        document.getElementById("room").value = listCustomer[index].typeRoom;
+        document.getElementById("customer").value = listCustomer[index].typeCustomer;
+        document.getElementById("sell").value = listCustomer[index].discount;
+        document.getElementById("quantityIncluded").value = listCustomer[index].quantityIncluded;
+        document.getElementById("rendDays").value = listCustomer[index].rendDays;
+    }
+
+    function editname(name) {
+        if (name == '') {
+            alert("name không được để trống.")
+            return "";
+        }
+        let tempName = "";
+        name = name.trim().toLowerCase();
+        for (let i = 0; i < name.length; i++) {
+            if (name.charAt(i) === " " && name.charAt(i + 1) === " ") {
+                continue;
+            }
+            if (i === 0 || name.charAt(i - 1) === " ") {
+                tempName += name.charAt(i).toUpperCase();
+                continue;
+            }
+            tempName += name.charAt(i);
+        }
+        return tempName;
+    }
+
+    function checkCmnd(cmnd) {
+        //kiểm tra cnmd phải là số không
+        // để dấu ! trước isNaN để nếu là chuối thì true còn không phải là
+        cmnd = cmnd * 1;
+        if (isNaN(cmnd)) {
+            cmnd = Number.parseFloat(cmnd);
+            return '';
+        }
+        if (!Number.isInteger(cmnd)) {
+            alert("CMND không đúng định dạng.");
+            return '';
+        }
+        if (cmnd < 100000000 || cmnd > 999999999) {
+            alert("CMND không đúng định dạng.");
+            return '';
+        }
+        return cmnd;
+    }
+
+    function checkRendays(rendDays) {
+        rendDays = rendDays * 1;
+        if (rendDays < 0) {
+            return '';
+        }
+        if (rendDays == "") {
+            return '';
+        }
+        return rendDays;
+    }
+
+    function checkMail(email) {
+        if (email == '') {
+            alert("email không được để trống.")
+            return "";
+        }
+        let countAt = 0;
+        let countDoc = 0;
+        for (let i = 0; i < email.length; i++) {
+            if (email[i] === "@") {
+                countAt++;
+                for (let j = i + 1; j < email.length; j++) {
+                    if (email[j] === ".") {
+                        countDoc++;
+                    }
+                }
+            }
+        }
+        if (countDoc < 1 || countAt != 1) {
+            alert("email bạn nhập không đúng");
+            return "";
+        }
+        return email;
+    }
+</script>
+</body>
+</html>

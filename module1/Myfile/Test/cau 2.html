@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a;
+    let regexElement= /^\d+$/;
+    let check=true;
+    while (check=true){
+         a=prompt('Nhapvoa so ma ban muon chech')
+        if(regexElement.test(a)){
+            a=parseInt(a)
+            break;
+        }else {
+            alert('This number not valid')
+        }
+    }
+ if (check){
+     alert('This is perfect number')
+ }else {
+     alert('This is not perfect number')
+ }
+
+  function checkNum(num) {
+        let sum=0;
+        for (let i=1;i<num/2;i++){
+            if (num%i==0){
+                sum+=i;
+            }
+            if (sum===num){
+                return true;
+            }
+            return false
+        }
+  }
+  check=checkNum(a)
+
+</script>
+
+</body>
+</html>

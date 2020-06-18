@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="display"></p>
+<button onclick="addStudent()">Add student here</button>
+<button onclick="check()">Check</button>
+<p id="display2"></p>
+
+
+</table>
+
+<script>
+    let displayList = [];
+
+    display();
+    function display() {
+        let tableString = "<table border='1'>\n" +"<tr>"+
+            "    <th>Id</th>\n" +
+            "    <th>Name</th>\n" +
+            "    <th>Birthday</th>\n" +
+            "    <th>Diem Van</th>\n" +
+            "    <th>Diem Toan</th>\n" +
+            "    <th>Diem Anh</th>"+
+            "</tr>"
+        for (let i = 0; i < displayList.length; i++) {
+            tableString +="<tr>"+
+                "    <td>" + displayList[i].id + "</td>\n" +
+                "    <td>" + displayList[i].name + "</td>\n" +
+                "    <td>" + displayList[i].birthday + "</td>\n" +
+                "    <td>" + displayList[i].diemVan+ "</td>\n" +
+                "    <td>" + displayList[i].diemToan + "</td>\n" +
+                "    <td>" + displayList[i].diemAnh + "</td>"
+            +"</tr>"
+        }
+        tableString += "</table>";
+        document.getElementById('display').innerHTML = tableString
+    }
+
+    class Candidate {
+
+
+
+
+        constructor(id, name, birthday, diemToan, diemVan, diemAnh) {
+            this.id = id;
+            this.name = name;
+            this.birthday = birthday;
+            this.diemToan = diemToan;
+            this.diemVan = diemVan;
+            this.diemAnh = diemAnh;
+        }
+        getId() {
+            return this.id;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getBirthday() {
+            return this.birthday;
+        }
+
+        getDiemToan() {
+            return this.diemToan;
+        }
+
+        getDiemVan() {
+            return this.diemVan;
+        }
+
+        getDiemAnh() {
+            return this.diemAnh;
+        }
+
+        setId(id) {
+            this.id = id;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        setBirthday(birthday) {
+            this.birthday = birthday;
+        }
+
+        setDiemToan(diemtoan) {
+            this.diemToan = diemToan;
+        }
+
+        setDiemVan(diemVan) {
+            this.diemVan = diemVan;
+        }
+
+        setDiemAnh(diemAnh) {
+            this.diemAnh = diemAnh;
+        }
+        diemTB(){
+            return  (this.diemVan+this.diemToan+this.diemAnh)   // what the hell is this
+        }
+
+    }
+
+    function addStudent() {
+        let testCandidate = new Candidate();
+
+        testCandidate.id=prompt('Nhap id');
+        testCandidate.name = prompt('Nhap name');
+        testCandidate.birthday = prompt('Nhap birthday');
+        testCandidate.diemVan = prompt('Nhap diem Van');
+        testCandidate.diemToan = prompt('Nhap diem Toan');
+        testCandidate.diemAnh = prompt('Nhap diem Anh');
+        displayList.push(testCandidate);
+        display()
+
+    }
+
+    function check() {
+        let  n=parseInt(prompt('Nhap vao so luong can check'))
+        if(n<=  displayList.length){
+            for (let i=0;i<displayList.length;i++){
+                if (displayList[i].diemTB().value>15){
+                    console.log(displayList[i].diemTB()   +" la hoc sinh co so diem tb tren 15")
+
+                }
+            }
+
+        }
+
+
+
+    }
+</script>
+
+</body>
+</html>

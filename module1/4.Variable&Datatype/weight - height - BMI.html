@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nghịch</title>
+    <style>
+        input {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<input type="text" name="height" id="height">
+<br>
+<input type="text" name="weight" id="weight">
+<input type="button" value="Check" id="check" onclick="check()">
+<p id="ketqua"></p>
+<script>
+    function check() {
+        let height = parseFloat(document.getElementById('height').value);
+        let weight = parseFloat(document.getElementById('weight').value);
+        let bmi = weight/height*2;
+
+
+        if (bmi > 30) {
+            parseFloat(document.getElementById('ketqua').innerHTML = 'Ban thuoc vao nhom Obese  BMI =' + bmi)
+        } else if (25.0 <= bmi < 30) {
+            parseFloat(document.getElementById('ketqua').innerHTML = 'Ban thuoc vao nhom Overweight BMI =' + bmi)
+        } else if (18.5 <= bmi < 25) {
+            parseFloat(document.getElementById('ketqua').innerHTML = 'Ban thuoc vao nhom Normal BMI =' + bmi)
+
+        } else
+            (bmi < 18, 5)
+        {
+            parseFloat(document.getElementById('ketqua').innerHTML = 'Ban thuoc vao nhom Underweight BMI = ' + bmi)
+        }
+    }
+
+</script>
+
+
+</body>
+</html>

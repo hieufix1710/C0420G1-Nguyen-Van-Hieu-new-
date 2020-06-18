@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<style>
+
+</style>
+<body>
+
+
+<form>
+<!--    <h1>Login</h1>-->
+<!--    <br>-->
+<!--    <input id="usename" type="text">-->
+<!--    <br>-->
+<!--    <br>-->
+<!--    <input id="password" type="password">-->
+<!--    <br>-->
+<!--    <br>-->
+<!--    <button onclick="login()">Login</button>-->
+    <button onclick="addEmployee()">Add Member</button>
+    <p id="display"></p>
+</form>
+
+</table>
+<script>
+
+
+
+    class Employee {
+        constructor(tenDangNhap,ten,matKhau,ngaySinh, soDienThoai, CMND, gioiTinh, diaChi) {
+            this.tenDangNhap = tenDangNhap;
+            this.ten = ten;
+            this.matKhau = matKhau;
+            this.ngaySinh = ngaySinh;
+            this.soDienThoai = soDienThoai;
+            this.CMND = CMND;
+            this.gioiTinh = gioiTinh;
+            this.diaChi = diaChi;
+        }
+        getTenDangNhap() {
+            return this.tenDangNhap;
+        }
+
+        setTenDangNhap(tenDangNhap) {
+            this.tenDangNhap = tenDangNhap;
+        }
+
+        getTen() {
+            return this.ten;
+        }
+
+        setTen(ten) {
+            this.ten = ten;
+        }
+
+        getMatKhau() {
+            return this.matKhau;
+        }
+
+        setMatKhau(matKhau) {
+            this.matKhau = matKhau;
+        }
+
+        getNgaySinh() {
+            return this.ngaySinh;
+        }
+
+        setNgaySinh(ngaySinh) {
+            this.ngaySinh = ngaySinh;
+        }
+
+        getSoDienThoai() {
+            return this.soDienThoai;
+        }
+
+        setSoDienThoai(soDienThoai) {
+            this.soDienThoai = soDienThoai;
+        }
+
+        getCMND() {
+            return this.CMND;
+        }
+
+        setCMND(CMND) {
+            this.CMND = CMND;
+        }
+
+        getGioiTinh() {
+            return this.gioiTinh;
+        }
+
+        setGioiTinh(gioiTinh) {
+            this.gioiTinh = gioiTinh;
+        }
+
+        getDiaChi() {
+            return this.diaChi;
+        }
+
+        setDiaChi(diaChi) {
+            this.diaChi = diaChi;
+        }
+
+    }
+    let list=[];
+    function displayTable() {
+        let tableString="<table border=\"1\">\n" +
+            "    <tr>Ten Dang Nhap</tr>\n" +
+            "    <tr>Ten</tr>\n" +
+            "    <tr>Mat khau</tr>\n" +
+            "    <tr>Ngay sinh</tr>\n" +
+            "    <tr>So dien thoai</tr>\n" +
+            "    <tr>CMND</tr>\n" +
+            "    <tr>Gioi tinh</tr>\n" +
+            "    <tr>Dia chi</tr>"
+        for(let i=0;i<list.length;i++){
+            tableString+=
+                "    <tr>"+list[i].ten+"</tr>\n" +
+                "    <tr>Ten</tr>\n" +
+                "    <tr>Mat khau</tr>\n" +
+                "    <tr>Ngay sinh</tr>\n" +
+                "    <tr>So dien thoai</tr>\n" +
+                "    <tr>CMND</tr>\n" +
+                "    <tr>Gioi tinh</tr>\n" +
+                "    <tr>Dia chi</tr>"
+        }
+
+    }
+
+    function addEmployee() {
+        let register = new Employee()
+
+         register.tenDangNhap =(prompt('Nhập tên đăng nhâp'));
+         register.ten = prompt("Nhap ten");
+         register.matKhau =parseInt(prompt('Nhập mật khẩu'));
+         register.ngaySinh=prompt('Nhap ngay sinh');
+         register.soDienThoai = prompt('Nhap so dien thoai');
+         register.CMND = prompt('Nhap CMND');
+         register.gioiTinh = prompt('Nhap gioi tinh');
+         register.diaChi = prompt('Nhap dia chi');
+
+
+
+
+        list.push(register)
+        displayList();
+
+    }
+
+
+
+
+
+
+    function login() {
+        for (let i=0;i<=list.length;i++){
+            if (list[i].tenDangNhap===document.getElementById('usename')&&list[i].matKhau===document.getElementById('password')){
+                alert('Login success')
+            }
+            else {
+                alert('Sai tên đăng nhập hoặc mật khẩu')
+            }
+        }
+
+
+    }
+
+
+</script>
+
+</body>
+</html>

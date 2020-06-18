@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    class Temparater {
+    constructor(value) {
+        value>-273
+        this.value=value;
+        this.convertToCelcius=function () {
+            return (value-32)/1.8
+
+        }
+        this.convertToFahrenheit=function () {
+            return (value*1.8)+32
+
+        }
+    }
+    }
+    let temparater=new Temparater(prompt('Nhap gia tri ban muon chuyen doi'))
+    confirm('xac nhan chuyen doi tu do C sang do F')
+    alert(temparater.convertToCelcius())
+</script>
+</body>
+</html>

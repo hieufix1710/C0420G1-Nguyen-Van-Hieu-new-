@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt('Nhập số lượng phần tử'+'\n'+'Lưu ý : Số nhập vào lớn hơn 6 !');
+    let array=new Array(n);
+    let count=0;
+    if(n>6){
+        while (count < n) {
+            let element = (prompt('Nhap phan tu thu: ' + count));
+            array[count] = element;
+            count++;
+        }
+        for (let i = 0; i < array.length; i++) {
+           console.log(array)
+
+        }
+
+    }
+    else {
+        alert('Vui lòng nhập lại')
+    }
+    alert('Mang truoc khi duoc sap xap :'+array)
+    alert('Mang sau khi sap xep tang dan :'+array.sort())
+
+
+
+
+</script>
+</body>
+</html>

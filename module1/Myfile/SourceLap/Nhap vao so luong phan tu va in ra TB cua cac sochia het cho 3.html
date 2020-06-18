@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt('Nhap so luong phan tu')
+    let array=new Array(n);
+    let count=0;
+    if(n>6){
+        while (count < n) {
+            let element = (prompt('Nhap phan tu thu: ' + count));
+            array[count] = element;
+            count++;
+        }
+        for (let i = 0; i < array.length; i++) {
+           array[i]=array[count]
+            count++
+            console.log(array[i])
+
+        }
+
+    }
+    else {
+        alert('Nhap lai')
+    }
+
+
+</script>
+</body>
+</html>

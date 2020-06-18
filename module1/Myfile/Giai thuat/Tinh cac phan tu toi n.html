@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tu;
+    let mau;
+    let n=prompt('Nhap so luong phan tu can tinh')
+    let sum=0;
+    for (let i=1;i<=n;i++){
+        sum+=1/i
+
+    }
+    console.log(Math.round((sum + 0.00001) * 100) / 100)
+
+    let count=1
+    for (let i=1;i<n*n;i++){
+       count++
+        if (i/count===sum){
+            alert(i+'/'+count)
+            break
+        }
+    }
+
+</script>
+</body>
+</html>

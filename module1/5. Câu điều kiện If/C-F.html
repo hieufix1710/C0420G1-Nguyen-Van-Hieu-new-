@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="C">
+<br><br>
+<p id="kq"></p>
+<button onclick="change()">Change</button>
+</body>
+<script>
+   function change(C) {
+        C=parseInt(document.getElementById('C').value)
+        let F=C*(9/5)+32
+      document.getElementById('kq').innerHTML =F
+
+   }
+</script>
+
+</html>

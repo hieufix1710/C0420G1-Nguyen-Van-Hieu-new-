@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    let Temperature = function(Celsius) {
+        this.Celsius = Celsius;
+        this.getTemperature = function() {
+            return this.Celsius;
+        }
+        this.setTemperature = function(Celsius) {
+            this.Celsius = Celsius;
+        }
+        this.convertToFahrenheit = function() {
+            return 1.80*this.Celsius + 32;
+        }
+        this.convertToKelvin = function() {
+            return this.Celsius + 271.15;
+        }
+    }
+    let temperature = new Temperature(10);
+    temperature.setTemperature(25);
+    alert(temperature.convertToFahrenheit());
+    alert(temperature.convertToKelvin());
+</script>
+</body>
+</html>
