@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c788f261-627f-4291-b5be-7215f716e5e3" name="Default Changelist" comment="" />
+    <list default="true" id="74ea2616-5e5e-45e5-94be-efa049893d6b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../module 2/src/case_study/Action.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module 2/src/case_study/List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module 2/src/case_study/tu_dien" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module 2/src/debug_and_exeption/bai_tap/bai1/IllegalTriangleException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module 2/src/debug_and_exeption/bai_tap/bai1/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module 2/src/debug_and_exeption/bai_tap/bai1/Triangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module 2/src/debug_and_exeption/bai_tap/bai2/TestThrow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module 2/src/debug_and_exeption/bai_tap/bai2/test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module 2/src/debug_and_exeption/thuc_hanh/LinearEquationResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module 2/src/debug_and_exeption/thuc_hanh/bai2/ArrayExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module 2/src/debug_and_exeption/thuc_hanh/bai3_number_format_exeptio/CalculationExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module 2/src/input_output_text/bai_tap/bai1_coppy_text_file/CoppyTextFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module 2/src/input_output_text/bai_tap/bai1_coppy_text_file/text.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module 2/src/input_output_text/bai_tap/bai2/ReadFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module 2/src/input_output_text/bai_tap/bai2/csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module 2/src/input_output_text/thuc_hanh/bai1/CheckFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module 2/src/input_output_text/thuc_hanh/bai1/WriterTextFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module 2/out/production/Module 2/sort_argothim/thuc_hanh/InsertionSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module 2/out/production/Module 2/sort_argothim/thuc_hanh/InsertionSort.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module 2/src/collection_framework/bai_tap/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module 2/src/collection_framework/bai_tap/ProductManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module 2/src/sort_argothim/thuc_hanh/InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module 2/src/sort_argothim/thuc_hanh/InsertionSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,8 +34,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTTP Request" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -19,10 +41,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1bHz9zXhkYq73hBX3mC34R2JcDE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1dob7xIFhQTXNkGjtwVEKEbRKp7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -31,118 +51,19 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="js.last.introduce.type" value="LET" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Myfile/Example/Table and Form/Table.html" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\C0420G1-Nguyen-Van-Hieu\module1\Mảng\Bài Tập" />
-      <recent name="D:\C0420G1-Nguyen-Van-Hieu\module1\Loop Statements" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\C0420G1-Nguyen-Van-Hieu\module1\Lập trình hướng đối tượng-OOP\Bài tập" />
-    </key>
-  </component>
-  <component name="RunManager" selected="JavaScript Debug.Table.html">
-    <configuration name="Check True.html" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost:63342/module1/8. Funcion/Bai tap/Check True.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="Game doan so.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/module1/Loop Statements/Game doan so.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="Module1_AccountName" type="JavascriptDebugType" temporary="true" uri="http://localhost:63342/module1/Tổng quan JavaScript/Document.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="Table.html" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost:63342/module1/Myfile/Example/Table and Form/Table.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="Yeu cau 5 - Task 3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/module1/CaseStudy/Yeu cau 5/Yeu cau 5 - Task 3.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="loop.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/module1/Loop Statements/loop.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="print.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/module1/Loop Statements/print.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="JavaScript Debug.Check True.html" />
-      <item itemvalue="JavaScript Debug.Table.html" />
-      <item itemvalue="JavaScript Debug.Game doan so.html" />
-      <item itemvalue="JavaScript Debug.loop.html" />
-      <item itemvalue="JavaScript Debug.Module1_AccountName" />
-      <item itemvalue="JavaScript Debug.print.html" />
-      <item itemvalue="JavaScript Debug.Yeu cau 5 - Task 3.html" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JavaScript Debug.Yeu cau 5 - Task 3.html" />
-        <item itemvalue="JavaScript Debug.print.html" />
-        <item itemvalue="JavaScript Debug.Game doan so.html" />
-        <item itemvalue="JavaScript Debug.loop.html" />
-        <item itemvalue="JavaScript Debug.Module1_AccountName" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c788f261-627f-4291-b5be-7215f716e5e3" name="Default Changelist" comment="" />
-      <created>1588303660186</created>
+      <changelist id="74ea2616-5e5e-45e5-94be-efa049893d6b" name="Default Changelist" comment="" />
+      <created>1593094229708</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1588303660186</updated>
-      <workItem from="1588303662835" duration="155000" />
-      <workItem from="1588303838032" duration="110000" />
-      <workItem from="1588304064292" duration="3000" />
-      <workItem from="1588308419199" duration="3000" />
-      <workItem from="1588309788515" duration="20000" />
-      <workItem from="1588309820128" duration="1933000" />
-      <workItem from="1588348155340" duration="3000" />
-      <workItem from="1588389539799" duration="4500000" />
-      <workItem from="1588394686866" duration="1183000" />
-      <workItem from="1588397074980" duration="2064000" />
-      <workItem from="1588504739377" duration="5000" />
-      <workItem from="1588562687448" duration="16454000" />
-      <workItem from="1588582626855" duration="4764000" />
-      <workItem from="1588599168157" duration="5098000" />
-      <workItem from="1588640396376" duration="25209000" />
-      <workItem from="1588682079328" duration="10160000" />
-      <workItem from="1588726286714" duration="2159000" />
-      <workItem from="1588736506614" duration="865000" />
-      <workItem from="1588738674257" duration="18009000" />
-      <workItem from="1588773401077" duration="2343000" />
-      <workItem from="1588814240668" duration="33235000" />
-      <workItem from="1588899594386" duration="19331000" />
-      <workItem from="1589038999926" duration="933000" />
-      <workItem from="1589159057291" duration="32084000" />
-      <workItem from="1589244136413" duration="1258000" />
-      <workItem from="1589246313557" duration="51062000" />
-      <workItem from="1589367466189" duration="22097000" />
-      <workItem from="1589437821133" duration="21489000" />
-      <workItem from="1589467573670" duration="13395000" />
-      <workItem from="1589527808173" duration="62402000" />
-      <workItem from="1589891959366" duration="6769000" />
-      <workItem from="1589938126631" duration="22896000" />
-      <workItem from="1590021554978" duration="22623000" />
-      <workItem from="1590110895037" duration="36767000" />
-      <workItem from="1590380035405" duration="64690000" />
-      <workItem from="1590539533357" duration="12543000" />
-      <workItem from="1590561884052" duration="71125000" />
-      <workItem from="1590745667293" duration="12155000" />
-      <workItem from="1590980112210" duration="3135000" />
-      <workItem from="1590996757244" duration="3608000" />
-      <workItem from="1591617567414" duration="298000" />
-      <workItem from="1592224258228" duration="880000" />
-      <workItem from="1592226522746" duration="246000" />
-      <workItem from="1592227737348" duration="644000" />
-      <workItem from="1592320488124" duration="284000" />
-      <workItem from="1592471900658" duration="13000" />
+      <updated>1593094229708</updated>
+      <workItem from="1593094232176" duration="247000" />
     </task>
     <servers />
   </component>
@@ -150,118 +71,9 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="465" y="49" key="#Document.html" timestamp="1588753977674">
+    <state x="275" y="28" key="#Inspections" timestamp="1593094284524">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="465" y="49" key="#Document.html/0.0.1366.738@0.0.1366.738" timestamp="1588753977674" />
-    <state x="275" y="28" key="#Inspections" timestamp="1590630331693">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="275" y="28" key="#Inspections/0.0.1366.738@0.0.1366.738" timestamp="1590630331693" />
-    <state x="137" y="25" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590544274770">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="137" y="25" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1590544274770" />
-    <state x="835" y="172" key="#com.intellij.ide.util.MemberChooser" timestamp="1590726237772">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="835" y="172" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1590726237772" />
-    <state x="413" y="117" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590630428779">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="413" y="117" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1590630428779" />
-    <state x="463" y="111" key="FileChooserDialogImpl" timestamp="1590544272346">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="463" y="111" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1590544272346" />
-    <state width="1345" height="227" key="GridCell.Tab.0.bottom" timestamp="1590544637252">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1345" height="227" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1590544637252" />
-    <state width="1345" height="227" key="GridCell.Tab.0.center" timestamp="1590544637252">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1345" height="227" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1590544637252" />
-    <state width="1345" height="227" key="GridCell.Tab.0.left" timestamp="1590544637252">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1345" height="227" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1590544637252" />
-    <state width="1345" height="227" key="GridCell.Tab.0.right" timestamp="1590544637252">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1345" height="227" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1590544637252" />
-    <state width="1345" height="227" key="GridCell.Tab.1.bottom" timestamp="1590544637252">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1345" height="227" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1590544637252" />
-    <state width="1345" height="227" key="GridCell.Tab.1.center" timestamp="1590544637252">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1345" height="227" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1590544637252" />
-    <state width="1345" height="227" key="GridCell.Tab.1.left" timestamp="1590544637252">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1345" height="227" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1590544637252" />
-    <state width="1345" height="227" key="GridCell.Tab.1.right" timestamp="1590544637252">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1345" height="227" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1590544637252" />
-    <state width="1345" height="227" key="GridCell.Tab.2.bottom" timestamp="1590544637253">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1345" height="227" key="GridCell.Tab.2.bottom/0.0.1366.738@0.0.1366.738" timestamp="1590544637253" />
-    <state width="1345" height="227" key="GridCell.Tab.2.center" timestamp="1590544637252">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1345" height="227" key="GridCell.Tab.2.center/0.0.1366.738@0.0.1366.738" timestamp="1590544637252" />
-    <state width="1345" height="227" key="GridCell.Tab.2.left" timestamp="1590544637252">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1345" height="227" key="GridCell.Tab.2.left/0.0.1366.738@0.0.1366.738" timestamp="1590544637252" />
-    <state width="1345" height="227" key="GridCell.Tab.2.right" timestamp="1590544637253">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1345" height="227" key="GridCell.Tab.2.right/0.0.1366.738@0.0.1366.738" timestamp="1590544637253" />
-    <state width="1345" height="227" key="GridCell.Tab.3.bottom" timestamp="1590544637253">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1345" height="227" key="GridCell.Tab.3.bottom/0.0.1366.738@0.0.1366.738" timestamp="1590544637253" />
-    <state width="1345" height="227" key="GridCell.Tab.3.center" timestamp="1590544637253">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1345" height="227" key="GridCell.Tab.3.center/0.0.1366.738@0.0.1366.738" timestamp="1590544637253" />
-    <state width="1345" height="227" key="GridCell.Tab.3.left" timestamp="1590544637253">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1345" height="227" key="GridCell.Tab.3.left/0.0.1366.738@0.0.1366.738" timestamp="1590544637253" />
-    <state width="1345" height="227" key="GridCell.Tab.3.right" timestamp="1590544637253">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1345" height="227" key="GridCell.Tab.3.right/0.0.1366.738@0.0.1366.738" timestamp="1590544637253" />
-    <state x="184" y="12" key="SettingsEditor" timestamp="1589371825164">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="184" y="12" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1589371825164" />
-    <state x="492" y="287" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589371897435">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="492" y="287" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738@0.0.1366.738" timestamp="1589371897435" />
-    <state x="244" y="106" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1589881190699">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="244" y="106" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.738@0.0.1366.738" timestamp="1589881190699" />
-    <state x="0" y="0" width="737" height="738" key="find.popup" timestamp="1589893277185">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="0" y="0" width="737" height="738" key="find.popup/0.0.1366.738@0.0.1366.738" timestamp="1589893277185" />
-    <state x="339" y="164" width="672" height="677" key="run.anything.popup" timestamp="1589965252584">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1588394921088" />
-    <state x="339" y="164" width="672" height="677" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1589965252584" />
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1590714364149">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1590714364149" />
+    <state x="275" y="28" key="#Inspections/0.0.1366.738@0.0.1366.738" timestamp="1593094284524" />
   </component>
 </project>
