@@ -1,12 +1,14 @@
 package collection_framework.bai_tap;
 
 
+import java.io.Serializable;
 import java.util.Comparator;
 
-public class Product implements Comparator<Product> {
-    public  int id;
-    public  String name;
-    public  int price;
+public class Product implements Comparator<Product>, Serializable {
+    private static final long serialVersionUID = 1L;
+    public int id;
+    public String name;
+    public int price;
 
 
     public Product(int id, String name, int price) {
@@ -55,9 +57,9 @@ public class Product implements Comparator<Product> {
 
     @Override
     public int compare(Product o1, Product o2) {
-        if (o1.price==o2.price)
+        if (o1.price == o2.price)
             return o1.name.compareTo(o2.name);
-        else if (o1.price>o2.price)
+        else if (o1.price > o2.price)
             return 1;
         else
             return -1;
