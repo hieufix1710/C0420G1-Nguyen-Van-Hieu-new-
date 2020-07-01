@@ -2,7 +2,7 @@ package Models;
 
 import java.util.Comparator;
 
-public class Room extends Services implements Comparator<Room> {
+public class Room extends Services implements Comparable<Room>, Comparator<Room> {
     protected String id;
     protected String standardRoom;
     protected String  description;
@@ -94,4 +94,11 @@ public class Room extends Services implements Comparator<Room> {
             return -1;
         }else return 0;
     }
+
+    @Override
+    public int compareTo(Room o) {
+        return this.getId().substring(6,9).compareTo(o.getId().substring(6,9));
+    }
+
+
 }

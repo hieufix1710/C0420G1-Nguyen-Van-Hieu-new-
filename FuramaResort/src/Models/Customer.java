@@ -2,8 +2,8 @@ package Models;
 
 import java.util.Comparator;
 
-public class Customer extends Services implements Comparator<Customer> {
-    private  String name;
+public class Customer extends Services implements Comparable<Customer> {
+    private String name;
     private String birthday;
     private String gender;
     private int CMND;
@@ -13,6 +13,7 @@ public class Customer extends Services implements Comparator<Customer> {
 
     public Customer() {
     }
+
 
     public Customer(String name, String birthday, String gender, int CMND, int phoneNumber, String email, String typeCustomer) {
         this.name = name;
@@ -82,24 +83,43 @@ public class Customer extends Services implements Comparator<Customer> {
 
     @Override
     public String showInfor() {
-            return "Customer{" +
-                    "name='" + name + '\'' +
-                    ", birthday='" + birthday + '\'' +
-                    ", gender='" + gender + '\'' +
-                    ", CMND=" + CMND +
-                    ", phoneNumber=" + phoneNumber +
-                    ", email='" + email + '\'' +
-                    ", typeCustomer='" + typeCustomer + '\'' +
-                    '}';
+        return "Customer{" +
+                "name='" + name + '\'' +
+                ", birthday='" + birthday + '\'' +
+                ", gender='" + gender + '\'' +
+                ", CMND=" + CMND +
+                ", phoneNumber=" + phoneNumber +
+                ", email='" + email + '\'' +
+                ", typeCustomer='" + typeCustomer + '\'' +
+                '}';
     }
 
+//    @Override
+//    public boolean equals(Object obj) {
+//        if(obj instanceof  Customer){
+//            if(this.name.equals(((Customer) obj).name)){
+//                return true;
+//            }
+//        }
+//        return false;
+//    }
+
     @Override
-    public int compare(Customer o1, Customer o2) {
-        if (Integer.parseInt(o1.birthday)>Integer.parseInt(o2.getBirthday()))
-            return 1;
-        else if (Integer.parseInt(o1.birthday)<Integer.parseInt(o2.getBirthday()))
-            return -1;
-        else
-            return 0;
+    public int compareTo(Customer o) {
+        int result = this.name.compareTo(o.getName());
+        if (result == 0) {
+            result = this.getBirthday().substring(7, 10).compareTo(o.getBirthday().substring(7, 10));
+
+            if (result == 0) {
+                result = this.getBirthday().substring(3, 5).compareTo(o.getBirthday().substring(3, 5));
+                if (result == 0)
+                    result = this.getBirthday().substring(0, 1).compareTo(o.getBirthday().substring(0, 1));
+            }
+        }
+        return result;
     }
+    //    @Override
+//    public int compare(Customer o1, Customer o2) {
+//        return o1.name.compareTo(o2.name);
+//    }
 }

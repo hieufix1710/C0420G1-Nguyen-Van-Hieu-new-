@@ -1,0 +1,1 @@
+Customer{name='Nguyễn Văn A', birthday='17/10/1990', gender='MALE', CMND=1234123434, phoneNumber=898605263, email='hieufix1710@gmail.com', typeCustomer='Go'} has booking this :Villa{id='SVVL-0001', standardRoom='123', areaUSe=41, description='41', poolArea=234, numberOfFloors=23}

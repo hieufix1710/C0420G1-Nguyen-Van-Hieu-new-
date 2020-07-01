@@ -1,8 +1,8 @@
 package Models;
 
-import java.util.Comparator;
 
-public class Employee extends Services implements Comparator<Employee> {
+
+public class Employee extends Services implements Comparable<Employee> {
     private String name;
     private String birthday;
     private String CMND;
@@ -107,11 +107,16 @@ public class Employee extends Services implements Comparator<Employee> {
 
 
     @Override
-    public int compare(Employee o1, Employee o2) {
-        if (o1.getSalary() > o2.getSalary()) {
-            return 1;
-        } else if (o1.getSalary() < o2.getSalary()) {
-            return -1;
-        } else return 0;
+    public int compareTo(Employee o) {
+        int result=this.getName().compareTo(o.getName());
+        if (result==0){
+            result=this.getBirthday().substring(7,10).compareTo(o.getBirthday().substring(7,10));
+            if (result == 0) {
+                result = this.getBirthday().substring(3, 5).compareTo(o.getBirthday().substring(3, 5));
+                if (result == 0)
+                    result = this.getBirthday().substring(0, 1).compareTo(o.getBirthday().substring(0, 1));
+            }
+        }
+        return result;
     }
 }

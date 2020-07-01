@@ -25,6 +25,7 @@ public class BuildCustomer {
             }
         }
         check=true;
+        scanner.nextLine();
 
         while (check){
             System.out.println("Enter birthday of customer :");
@@ -39,6 +40,7 @@ public class BuildCustomer {
             }
         }
         check=true;
+        scanner.nextLine();
 
         while (check){
             System.out.println("Enter gender of customer :");
@@ -53,6 +55,7 @@ public class BuildCustomer {
             }
         }
         check=true;
+        scanner.nextLine();
 
         while (check){
             System.out.println("Enter CMND of customer :");
@@ -67,6 +70,7 @@ public class BuildCustomer {
             }
         }
         check=true;
+        scanner.nextLine();
 
         while (check){
             System.out.println("Enter email of customer :");
@@ -81,6 +85,7 @@ public class BuildCustomer {
             }
         }
         check=true;
+        scanner.nextLine();
 
         while (check){
             System.out.println("Enter phone number of customer :");
@@ -94,9 +99,9 @@ public class BuildCustomer {
                 check=true;
             }
         }
-        check=true;
         System.out.println("Enter  type of customer :");
         customer.setTypeCustomer(scanner.nextLine());
+        scanner.nextLine();
         return customer;
 
     }

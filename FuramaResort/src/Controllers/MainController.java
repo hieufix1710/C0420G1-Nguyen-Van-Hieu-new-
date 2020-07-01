@@ -21,12 +21,15 @@ public class MainController {
         switch (choose1) {
             case 1:
                 addNewSevices();
+                displayMainMenu();
                 break;
             case 2:
                 showServices();
+                displayMainMenu();
                 break;
             case 3:
                 addNewCustomer();
+                displayMainMenu();
                 break;
             case 4:
                 WriteAndReadCSV writeAndReadCSV3 = new WriteAndReadCSV();
@@ -34,7 +37,8 @@ public class MainController {
                 displayMainMenu();
                 break;
             case 5:
-                addNewBooking();
+
+
 
                 break;
             case 6:
@@ -47,6 +51,7 @@ public class MainController {
                 break;
             default:
                 System.out.println("Not valid ! Try again !");
+                displayMainMenu();
         }
     }
 
@@ -83,6 +88,7 @@ public class MainController {
                 break;
             default:
                 System.out.println("Not valid !");
+                displayMainMenu();
         }
     }
 
@@ -91,28 +97,40 @@ public class MainController {
 
         System.out.println("Menu");
         System.out.println("1.Show all Villa" + "\n" + "2.Show all House" + "\n" + "3.Show all Room" + "\n" + "4.Show " +
-                "All Name Villa Not Duplicate\n" + "5.Show All Name House Not Duplicate" + "\n" + "6.Show All Name Name Not Duplicate" + "" +
+                "All Name Villa Not Duplicate\n" + "5.Show All Name House Not Duplicate" + "\n" + "6.Show All Name Room Not Duplicate" + "\n" +
                 "7.Back to menu" + "\n" + "8.Exit");
         int choose3 = scanner.nextInt();
         switch (choose3) {
             case 1:
-                WriteAndReadCSV writeAndReadCSV = new WriteAndReadCSV();
-                writeAndReadCSV.read(1);
-                displayMainMenu();
-                break;
+               WriteAndReadCSV writeAndReadCSV1=new WriteAndReadCSV();
+               writeAndReadCSV1.readAll(1);
+               displayMainMenu();
+               break;
             case 2:
-                WriteAndReadCSV writeAndReadCSV1 = new WriteAndReadCSV();
-                writeAndReadCSV1.read(2);
-                displayMainMenu();
+                WriteAndReadCSV writeAndReadCSV2=new WriteAndReadCSV();
+                writeAndReadCSV2.readAll(2);
+               displayMainMenu();
                 break;
             case 3:
-                WriteAndReadCSV writeAndReadCSV2 = new WriteAndReadCSV();
-                writeAndReadCSV2.read(3);
+                WriteAndReadCSV writeAndReadCSV3=new WriteAndReadCSV();
+                writeAndReadCSV3.readAll(3);
+
+            case 4:
+                WriteAndReadCSV writeAndReadCSV4 = new WriteAndReadCSV();
+                writeAndReadCSV4.read(1);
                 displayMainMenu();
                 break;
-            case 4:
             case 5:
+                WriteAndReadCSV writeAndReadCSV5 = new WriteAndReadCSV();
+                writeAndReadCSV5.read(2);
+                displayMainMenu();
+                break;
             case 6:
+                WriteAndReadCSV writeAndReadCSV6 = new WriteAndReadCSV();
+                writeAndReadCSV6.read(3);
+                displayMainMenu();
+                break;
+
             case 7:
                 displayMainMenu();
                 break;
@@ -155,16 +173,18 @@ public class MainController {
         }
 
     }
-    public void addNewBooking(){
-        WriteAndReadCSV writeAndReadCSV=new WriteAndReadCSV();
-        writeAndReadCSV.read(4);
-        System.out.println("Enter id of customer to booking :");      //task7
-
-
-
-
-
-    }
+//    public void addNewBooking(){
+//        WriteAndReadCSV writeAndReadCSV=new WriteAndReadCSV();
+//        writeAndReadCSV.read(4);
+//        System.out.println("Enter id of customer to booking :");//task7
+//        Scanner scanner=new Scanner(System.in);
+//
+//
+//
+//
+//
+//
+//    }
 
     public static void main(String[] args) {
         MainController mainController = new MainController();

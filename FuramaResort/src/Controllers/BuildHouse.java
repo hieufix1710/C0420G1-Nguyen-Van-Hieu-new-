@@ -23,12 +23,30 @@ public class BuildHouse {
         }
         System.out.println("Enter standar room of house");
         house.setStandardRoom(scanner.nextLine());
+        scanner.nextLine();
         System.out.println("Enter description of house");
         house.setDescription(scanner.nextLine());
+        scanner.nextLine();
         System.out.println("Enter number of floor of house :");
         house.setNumberOfFloors(scanner.nextInt());
+        scanner.nextLine();
         System.out.println("Entr area use of house");
-        house.setArea(scanner.nextInt());
+        boolean checkArea = true;
+        scanner.nextLine();
+        int area = scanner.nextInt();
+        while (checkArea) {
+            if (area > 30) {
+                house.setArea(area);
+                checkArea = false;
+            } else {
+                System.out.println("This area not valid !");
+                checkArea = true;
+
+            }
+
+        }
+
+
         return house;
 
     }

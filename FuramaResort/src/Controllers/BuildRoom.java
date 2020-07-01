@@ -22,12 +22,26 @@ public class BuildRoom {
                 System.out.println("ID not valid !");
             }
         }
+        scanner.nextLine();
         System.out.println("Enter standard room :");
         room.setStandardRoom(scanner.nextLine());
+        scanner.nextLine();
         System.out.println("Enter description of room :");
         room.setDescription(scanner.nextLine());
+        scanner.nextLine();
         System.out.println("Enter number of floor");
-        room.setNumberOfFloors(scanner.nextInt());
+        int numberFloor=scanner.nextInt();
+        boolean checkFloor =true;
+        while (checkFloor){
+            if (numberFloor>0){
+                room.setNumberOfFloors(numberFloor);
+                checkFloor=false;
+            }else {
+                System.out.println("Number of floor not valid !");
+                checkFloor=true;
+            }
+        }
+        scanner.nextLine();
         System.out.println("Entr area use of room");
         room.setArea(scanner.nextInt());
         System.out.println("Enter service attached :");

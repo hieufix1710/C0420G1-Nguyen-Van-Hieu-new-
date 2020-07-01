@@ -2,7 +2,7 @@ package Models;
 
 import java.util.Comparator;
 
-public class Villa extends Services implements Comparator<Villa> {
+public class Villa extends Services implements Comparable<Villa>,Comparator<Villa> {
     private String id;
     private String standardRoom;
     protected int areaUSe;
@@ -85,13 +85,22 @@ public class Villa extends Services implements Comparator<Villa> {
     }
 
 
+
+
+    @Override
+    public int compareTo(Villa o) {
+        int result=this.getId().substring(6,9).compareTo(o.getId().substring(6,9));
+        return result;
+    }
+
+
+
     @Override
     public int compare(Villa o1, Villa o2) {
-        if ((o1.getAreaUSe()) > (o2.getAreaUSe())) {
+        if (o1.getAreaUSe()>o2.getAreaUSe()){
             return 1;
-        } else if (o1.getAreaUSe() < (o2.getAreaUSe())) {
+        }else if (o1.getAreaUSe()<o2.getAreaUSe()){
             return -1;
-        } else
-            return 0;
+        }else return 0;
     }
 }
