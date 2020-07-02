@@ -93,17 +93,7 @@ public class Customer extends Services implements Comparable<Customer> {
                 ", typeCustomer='" + typeCustomer + '\'' +
                 '}';
     }
-
-//    @Override
-//    public boolean equals(Object obj) {
-//        if(obj instanceof  Customer){
-//            if(this.name.equals(((Customer) obj).name)){
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
-
+    //Method equals name and birthday
     @Override
     public int compareTo(Customer o) {
         int result = this.name.compareTo(o.getName());
@@ -118,8 +108,21 @@ public class Customer extends Services implements Comparable<Customer> {
         }
         return result;
     }
+}
+
+//    @Override
+//    public boolean equals(Object obj) {
+//        if(obj instanceof  Customer){
+//            if(this.name.equals(((Customer) obj).name)){
+//                return true;
+//            }
+//        }
+//        return false;
+//    }
+
+
     //    @Override
 //    public int compare(Customer o1, Customer o2) {
 //        return o1.name.compareTo(o2.name);
 //    }
-}
+

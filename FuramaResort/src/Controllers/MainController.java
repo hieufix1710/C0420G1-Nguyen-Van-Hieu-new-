@@ -37,9 +37,9 @@ public class MainController {
                 displayMainMenu();
                 break;
             case 5:
-
-
-
+                AddNewBook addNewBook = new AddNewBook();
+                addNewBook.writeToFile();
+                displayMainMenu();
                 break;
             case 6:
                 WriteAndReadCSV writeAndReadCSV4 = new WriteAndReadCSV();
@@ -55,7 +55,7 @@ public class MainController {
         }
     }
 
-
+    //Add new service to file data
     public void addNewSevices() {
         Scanner scanner = new Scanner(System.in);
 
@@ -91,7 +91,7 @@ public class MainController {
                 displayMainMenu();
         }
     }
-
+    //Show service in file data
     public void showServices() {
         Scanner scanner = new Scanner(System.in);
 
@@ -142,12 +142,13 @@ public class MainController {
         }
     }
 
-
+    //Add new customer to file data
     public void addNewCustomer() {
         Customer customer;
         BuildCustomer buildCustomer = new BuildCustomer();
+        //build customer
         customer = buildCustomer.buildCustomer();
-
+        //write customer to file
         try {
             FileWriter fileWriter = new FileWriter("src/Data/Customer.csv", true);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
@@ -173,18 +174,6 @@ public class MainController {
         }
 
     }
-//    public void addNewBooking(){
-//        WriteAndReadCSV writeAndReadCSV=new WriteAndReadCSV();
-//        writeAndReadCSV.read(4);
-//        System.out.println("Enter id of customer to booking :");//task7
-//        Scanner scanner=new Scanner(System.in);
-//
-//
-//
-//
-//
-//
-//    }
 
     public static void main(String[] args) {
         MainController mainController = new MainController();

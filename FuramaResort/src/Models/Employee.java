@@ -105,7 +105,7 @@ public class Employee extends Services implements Comparable<Employee> {
                 '}';
     }
 
-
+     //Method compare name and birthday
     @Override
     public int compareTo(Employee o) {
         int result=this.getName().compareTo(o.getName());

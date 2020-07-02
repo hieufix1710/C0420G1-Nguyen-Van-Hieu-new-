@@ -19,6 +19,7 @@ public class FilingCabinets {
         this.stack = stack;
 
     }
+    //This method searching employee in filling cabinets.
     public void find(String name){
         try {
             stack=new Stack<>();

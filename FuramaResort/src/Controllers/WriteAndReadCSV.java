@@ -14,11 +14,14 @@ public class WriteAndReadCSV {
     Villa villa;
     House house;
     Room room;
-
+    //Add villa service to file data
     public void writeVilla() {
         BuildVilla buildVilla = new BuildVilla();
+
+        //Build villa service
         villa = buildVilla.BuildVilla();
 
+        //Write villa service to file data
         try {
             FileWriter writer = new FileWriter(PATH1, true);
 
@@ -44,11 +47,12 @@ public class WriteAndReadCSV {
             e.printStackTrace();
         }
     }
-
+    //Add house service to fila data
     public void writeHouse() {
         BuildHouse buildHouse = new BuildHouse();
+        //Build house service
         house = buildHouse.buildHouse();
-
+        //Write house service to fila data
         try {
             FileWriter writer = new FileWriter(PATH2, true);
 
@@ -73,12 +77,13 @@ public class WriteAndReadCSV {
         }
 
     }
-
+    //Add room service to file data
     public void writeRoom() {
         BuildRoom buildRoom = new BuildRoom();
+        //Build room service
         room = buildRoom.buildRoom();
 
-
+        //Write room service to file data
         try {
             FileWriter writer = new FileWriter(PATH3, true);
 
@@ -105,9 +110,10 @@ public class WriteAndReadCSV {
 
     }
 
-
+    //Display data service not duplicate
     public void read(int choose) {
         switch (choose) {
+            //Display data villa service in file data
             case 1:
                 Set<Villa> villaList = new TreeSet<>();
                 try {
@@ -135,6 +141,7 @@ public class WriteAndReadCSV {
                     e.printStackTrace();
                 }
                 break;
+             //Display data house service  in file data
             case 2:
                 Set<House> houseList = new TreeSet<>();
                 try {
@@ -160,6 +167,7 @@ public class WriteAndReadCSV {
                     e.printStackTrace();
                 }
                 break;
+             //Display room data in file data
             case 3:
                 Set<Room> roomList = new TreeSet<>();
                 try {
@@ -284,9 +292,10 @@ public class WriteAndReadCSV {
         }
 
     }
-
+    //Display all data service
     public void readAll(int choose) {
         switch (choose) {
+            //Display all villa service in file data
             case 1:
                 List<Villa> villaList = new ArrayList<>();
                 try {
@@ -314,6 +323,7 @@ public class WriteAndReadCSV {
                     e.printStackTrace();
                 }
                 break;
+             //Display all house service in file data
             case 2:
                 List<House> houseList = new ArrayList<>();
                 try {
@@ -339,6 +349,7 @@ public class WriteAndReadCSV {
                     e.printStackTrace();
                 }
                 break;
+              //Display all room service in file data
             case 3:
                 List<Room> roomList = new ArrayList<>();
                 try {
