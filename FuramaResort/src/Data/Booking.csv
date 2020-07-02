@@ -1,1 +1,0 @@
-Customer{name='Nguyễn Văn A', birthday='17/10/1990', gender='MALE', CMND=1234123434, phoneNumber=898605263, email='hieufix1710@gmail.com', typeCustomer='Go'} has booking this :House{id='SVHO-0001', standardRoom='123', description='41', numberOfFloors=41, area=234}

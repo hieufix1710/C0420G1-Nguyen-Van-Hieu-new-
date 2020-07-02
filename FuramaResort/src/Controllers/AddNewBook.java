@@ -88,13 +88,13 @@ public class AddNewBook {
         System.out.println("Enter name customer need booking :");
         Scanner scanner=new Scanner(System.in);
         String name=scanner.nextLine();
-        String s1=readCustomer(name);   //String save information of customer selected
+        String s1=readCustomer(name);   // information of customer selected
         System.out.println("Menu");
         System.out.println("1. Booking Villa :");
         System.out.println("2. Booking House :");
         System.out.println("3. Booking Room :");
         int choose=new Scanner(System.in).nextInt();
-        String s2=readService(choose);
+        String s2=readService(choose); //  information of service selected
         //Write file
         try {
             FileWriter fileWriter=new FileWriter("src/Data/Booking.csv",true);
@@ -106,7 +106,7 @@ public class AddNewBook {
             bufferedWriter.write(stringBuffer.toString());
             bufferedWriter.newLine();
             bufferedWriter.close();
-            System.out.println("Booking succed !");
+            System.out.println("Booking success !");
         } catch (IOException e) {
             e.printStackTrace();
         }
